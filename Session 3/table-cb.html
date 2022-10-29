@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: arial, sans-serif;
+    }
+    th,
+    td {  
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        font-style: bold;
+        text-align: center;
+    }
+    tr:nth-child(even) {
+        background-color: gray;
+
+    }
+</style>
+<body>
+    <h1>Bảng thông tin</h1>
+    <table>
+        <tr>
+            <th>Tên</th>
+            <th>SĐT</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Hà</td>
+            <td>123</td>
+            <td>h@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Nhung</td>
+            <td>456</td>
+            <td>n@gmail.com</td>
+        </tr><tr>
+            <td>Khoa</td>
+            <td>789</td>
+            <td>k@gmail.com</td>
+        </tr>
+    </table>
+</body>
+</html>
