@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    fieldset {
+        text-align: center;
+        width: 50%;
+        padding-top: 10px;
+        
+    }
+    form {
+        background-color: rgb(214, 194, 194);
+        width: 100%;
+        text-align: left;
+    }
+</style>
+<body>
+    <fieldset>
+        <legend style="font-weight: bold;">THÔNG TIN</legend>
+   
+    <form action="/" method="get">
+        <label for="username">Name:</label>
+        <input type="text" name="username">
+        <br>
+        <label for="date">Ngày tháng năm sinh:</label>
+            <input type="date" name="date">
+        <br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="male">Nam
+        <input type="radio" name="gender" value="female">Nữ
+        <br>
+        <label for="address">Địa chỉ:</label>
+        <input type="text" name="address" >
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email">
+        <br><br>
+        <label for="education">Hệ giáo dục</label>
+        <select name="education">
+            <option value="thpt">THPT</option>
+            <option value="dh">Đại học</option>
+        </select>
+        <br><br>
+        <label for="text">Chú thích:</label>
+        <textarea name="text" id="" cols="30" rows="5"></textarea>
+        <br>
+        <label for="interest">Sở thích:</label>
+        <input type="checkbox" name="interest">code
+        <input type="checkbox" name="interest">Du lịch
+        <br>
+        <label for="image">Tải ảnh chân dung:</label>
+        <input type="file" name="image">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    </fieldset>
+</body>
+</html>
