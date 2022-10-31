@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    h2 {
+        font-family: courier;
+        text-align: center;
+        background-color: red;
+        color: white;
+    }
+    body {
+        font-family: helvetica;
+        width: 50%;        
+    }
+    .container {
+        background-color: gray;
+        font-family: arial;
+        width: 70%;
+        margin-left: 70px;
+    }
+    .col25 {
+        float: left;
+        width: 25%;
+        margin-top: 10px;
+    }
+    .col75 {
+        float: left;
+        width: 75%;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <h2>SỞ THÍCH CỦA BẠN</h2>
+    <div class="container">
+       <form action="">
+        <div class="row">
+            <div class="col25">
+                <label for=" ">Họ và tên</label>
+            </div>
+            <div class="col75">
+                <input type="text" name="fullname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col25">
+                <label for="">Email</label>
+            </div>
+            <div class="col75">
+                <input type="text" name="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col25">
+                <label for="">Sở thích</label>
+            </div>
+            <div class="col75">
+                <input type="checkbox">Thể thao
+                <input type="checkbox">Âm nhạc
+                <input type="checkbox">Đọc sách
+                <br>
+                <input type="checkbox">Lướt web
+                <input type="checkbox">Chơi game
+                <input type="checkbox">Điện ảnh
+                <br>
+                <input type="checkbox">Du lịch
+                <br>
+            <div class="col75">
+                <input type="submit" value="Gửi thông tin">
+                <input type="submit" value="Nhập lại">
+            </div>
+            </div>
+        </div>
+       </form>
+    </div>
+</body>
+</html>

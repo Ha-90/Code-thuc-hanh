@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: helvetica;
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+        padding: 5px;
+        color: blue;
+        border: 15px solid rgb(217, 200, 200);
+    }
+    p {
+        text-align: left;
+        padding-left: 50px;  
+     }
+    h2 {
+        text-align: center;
+        background-color: red;
+        color: white;
+        margin-top: 3px;
+    }
+</style>
+<body>
+    <form action="">
+        <h2>SỞ THÍCH CỦA BẠN</h2>
+        <p>Họ và tên <span><input type="text" name="yourname" size="30""></span></p>
+        <p>Email <span><input type="text" name="email"></span></p>
+        <p>Sở thích<span style="color: red;">
+            <input type="checkbox" name=" ">Thể thao <span> <input type="checkbox" name=" ">Âm nhạc <input type="checkbox" name=" ">Đọc sách<br>
+            <input type="checkbox" name=" ">Lướt web <span><input type="checkbox" name=" ">Chơi game <input type="checkbox">Điện ảnh<br>
+            <input type="checkbox">Du lịch
+        </span></p>
+            <input type="submit" value="Gửi thông tin"> <input type="reset" value="Nhập lại">
+    </form>
+</body>
+</html>
