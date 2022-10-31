@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        width: 70%;
+        background-color: rgb(234, 234, 147);
+    }
+    h2 {
+        background-color: rgb(145, 165, 145);
+        color: blue;
+    }
+    label {
+        display: inline-block;
+        width: 80px;
+        padding-left: 20px;
+    }
+    textarea, div {
+        margin-left: 100px;
+    }
+</style>
+<body>
+    <form action="">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <label for="text">Họ và tên</label>
+        <input type="text" name="text">
+        <br><br>
+        <label for="">Ngày sinh</label>
+        <input type="date" name="date">
+        <br><br>
+        <label for="">Giới tính</label>
+        <input type="radio" name="gender" value="male">Nam
+        <input type="radio" name="gender" value="female">Nữ
+        <br><br>
+        <label for="">Địa chỉ</label><br>
+        <textarea name="text" id="" cols="30" rows="5"></textarea>
+        <br><br>
+        <label for="">Lớp</label>
+        <select name="">
+            <option value="--Chọn lớp--">--Chọn lớp--</option>
+            <option value="JV8">JV8</option>
+            <option value="JV9">JV9</option>
+            <option value="JV9">JV10</option>
+        </select>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <br><br>
+        <label for="phonenumber">Điện thoại</label>
+        <input type="text" name="phonenumber">
+        <br><br>
+        <div>
+        <input type="submit" value="Đăng ký"> <input type="reset" value="Nhập lại">
+        </div>
+    </form>
+</body>
+</html>
