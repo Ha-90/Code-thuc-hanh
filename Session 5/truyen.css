@@ -1,0 +1,58 @@
+body {
+    font-family: arial;
+    background-color: rgb(252, 252, 216);
+    width: 60%;
+    margin-left: 20%;
+}
+
+header {
+    background-color: orange;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h1 {
+    color: red;
+    padding-top: 5px;
+}
+
+nav {
+    font-size: 150%;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: pink;
+}
+
+img {
+    width: width="730";
+    height: "400";
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer {
+    background-color: rgb(145, 226, 145);
+    width: 110%;
+}
+
+h5 {
+    font-size: 120%;
+    background-color: yellow;
+    width: 200px;
+}
+
+.h6 {
+    font-size: 110%;
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+
+}
