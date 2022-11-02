@@ -1,0 +1,21 @@
+
+body {
+    width: 75%;
+    background-color: rgb(242, 242, 210);
+    margin-left: 50px;
+}
+h1 {
+    color: orange;
+}
+.blue {
+    color: blue;
+}
+.red {
+    color: red;
+}
+.background {
+    background-color: rgb(227, 227, 167);
+}
+span {
+    font-weight: bold;
+}
