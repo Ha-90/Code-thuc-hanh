@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="truyen.css">
+</head>
+<style>
+    fieldset {
+        width: 50%;
+        margin-left: 25%;
+    }
+    .large {
+        width: 900px;
+    }
+    #small {
+        width: 150px;
+    }
+    p {
+        text-align: left;
+        margin-left: 0;
+        font-style: italic;
+        font-size: 13px;
+    }
+</style>
+<body>
+    <fieldset>
+        <h1>Đăng ký tài khoản mới</h1>
+    <form action="https://www.bing.com/search?" method="post">
+        <table>
+            <tr>
+                <td id="small"><label for="">Tên đăng nhập:</label></td>
+                <td id="large"><input type="text" required></td>
+            </tr>
+            <tr>
+                <td id="small"></td>
+                <td id="large"><p id="italic">Viết liền không dấu</p></td>
+            </tr>
+            <tr>
+                <td id="small"><label for="">Mật khẩu:</label></td>
+                <td id="large"><input type="password" required></td>
+            </tr>
+            <tr>
+                <td id="small"></td>
+                <td id="large"><p id="italic">Bắt buộc: có 1 ký chữ cái in hoa ở đầu, có số, kèm 1 ký tự đặc biệt</p></td>
+            </tr>
+            <tr>
+                <td id="small"><label for="">Nhập lại password:</label></td>
+                <td id="large"><input type="password" required> 
+            </td>
+            <tr>
+                <td></td>
+                <td><br><input type="button" name="click" value="Đăng ký" onclick="alert('Mật khẩu không khớp. Vui lòng nhập lại')"></td>
+            </tr>
+                
+            </tr>
+        </table>
+
+    </form>
+    </fieldset>
+</body>
+</html>

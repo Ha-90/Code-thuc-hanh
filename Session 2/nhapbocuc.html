@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: helvetica;
+    
+    }
+    header {
+        background-color: rgb(127, 114, 114);
+        text-align: center;
+        padding: 20px;
+    }
+    nav {
+        background-color: yellow;
+       float: left; 
+       width: 20%;
+       padding: 0px;
+       height: 400px;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+    }
+    article {
+        background-color: rgb(239, 239, 198);
+        float: left;
+        width: 50%;
+        padding-left: 10px;
+        height: 400px;
+     
+    }
+    footer {
+        background-color: rgb(222, 194, 194);
+        padding: 20px;
+        text-align: center;
+    }
+    aside {
+        background-color: pink;
+        float: left;
+        padding: 5px;
+        height: 375px;
+        padding-top: 20px;
+     
+        width: 28%;
+    }
+    div::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+</style>
+<body>
+    <h2>CSS Layout Float</h2>
+    <p>In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will stack on
+    top of each other.
+    
+    Resize the browser window to see the responsive effect (you will learn more about this in our next chapter - HTML
+    Responsive.)</p>
+   <header>
+    <h1>Cities</h1>
+    </header> 
+   <div>
+    <nav>
+        <ul>
+            <li>London</li>
+            <li>Paris</li>
+            <li>Tokyo</li>
+        </ul>
+    </nav>
+    <article>
+        <h2>London</h2>
+        <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of
+        over 13 million inhabitants.</p>
+        <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its
+        founding by the Romans, who named it Londinium.</p>
+    </article>
+    <aside>
+        <form action="">
+            <label for="">Login:</label>
+            <input type="text" name="text">
+        </form>
+    </aside>
+    </div>
+    
+    <footer>Footer</footer>
+</body>
+</html>
