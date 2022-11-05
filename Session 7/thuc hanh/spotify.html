@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: helvetica;
+        margin: 0;
+    }
+    .header {
+        background-color: black;
+        width: 1215px;
+        height: 65px;
+        margin-bottom: 0px;
+        position: fixed;
+    }
+    .header img {
+        height: 65px;
+        width: 240px;
+    }
+    .header-link {
+        background-color: black;
+        float: right;
+        width: 935px;
+        text-align: right;
+        font-family: helvetica;
+        font-size: 20px;
+        padding: 20px 17px;
+        clear: both;
+    }
+   .header-link a {
+        text-decoration: none;
+        color: rgb(214, 181, 181);
+        padding: 5px 20px;
+   } 
+   #white {
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+   }
+   .header-link a:hover {
+        color: white;
+   }
+   .left ul {
+        float: left;
+        background-color: black;
+        color: white;
+        width: 240px;
+        min-height: 640px;
+        margin-top: 0;
+        margin-bottom: 0;
+        clear: both;
+        position: fixed;
+   }
+   .left li {
+        list-style-type: none;
+   }
+   .left a {
+        text-decoration: none;
+        color: rgb(214, 181, 181);
+    
+   }
+   #li-white a {
+        color: white;
+   }
+   .left img {
+        margin-top: 20px;
+   }
+   .left li a:hover {
+        color: white;
+   }
+   .content {
+        float: left;
+        background-color: rgb(58, 54, 54);
+        height: 600px;
+        width: 935px;
+        color: white;
+        padding-bottom: 40px;
+        margin-left: 280px;
+        margin-top: 65px;
+   }
+   .content h2 {
+        padding-left: 40px;
+   }
+   .grid-container1, .grid-container2 {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: rgb(58, 54, 54);
+        padding: 20px 20px;
+        padding-left: 50px;
+        gap: 20px 30px;
+    }
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgb(58, 54, 54);
+        padding: 0px;
+        font-size: 30px;
+        text-align: center;
+        height: 200px;
+        width: 150px;
+        border-radius: 12px;
+    }
+    .grid-item iframe {
+        border-left: 0px;
+    }
+    footer {
+        background-color: black;
+        float: left;
+        height: 65px;
+        width: 1195px;
+        margin-top: 0;
+        color: white;
+        font-size: 14px;
+        padding-left: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="header">
+        <a href=""><img src="/img/face crop/spotify.jpg" alt=""></a> 
+        <div class="header-link">
+            <a href="https://www.spotify.com/vn-vi/premium/?utm_source=app&utm_medium=desktop&utm_campaign=upgrade">Premium</a>
+            <a href="https://support.spotify.com/vn-vi/">Support</a> 
+            <a href="https://www.spotify.com/vn-vi/download/windows/"> Download</a>
+            <a href="https://www.spotify.com/vn-vi/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign up</a>
+            <a id="white" href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F">Log in</a>
+        </div>
+
+    </div>
+    <div class="left">
+        <ul>
+            <li id="li-white"><a href=""><img src="/img/face crop/home spotify.jpg" alt="">  Home</a></li>
+            <li><a href=""><img src="/img/face crop/search.jpg" alt="">  Search</a></li>
+            <li><a href=""><img src="/img/face crop/library.jpg" alt="">  Your Library</a></li>
+            <br>
+            <li><a href=""><img src="/img/face crop/created.jpg" alt="">  Created Plalist</a></li>
+            <li><a href=""><img src="/img/face crop/liked song.jpg" alt=""> Liked Song</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Spotify Playlists</h2>
+        <div class="grid-container1">
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; " loading="lazy"></iframe></div> 
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5Ejj0EkURtP?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <h2>Mood</h2>
+        <div class="grid-container2">
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3rxVfibe1L0?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9XIFQuFvzM4?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2pSTOxoPbx9?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+            <div class="grid-item"><iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcEKFjZJYZcc?utm_source=generator" width="150" height="200"
+                frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2022 Spotify AB. All Rights Reserved.      Contact us  <a href="https://www.instagram.com/spotify/"><img src="/img/face crop/instagram.jpg" alt="" width="30" height="30"></a>
+        <a href="https://twitter.com/spotify"><img src="/img/face crop/twister.jpg" alt="" width="30" height="30"></a>
+        <a href="https://www.facebook.com/SpotifyVietnam/?brand_redir=6243987495"><img src="/img/face crop/face.jpg" alt="" width="30" height="30"></a>
+        </p>
+    </footer>
+</body>
+</html>
