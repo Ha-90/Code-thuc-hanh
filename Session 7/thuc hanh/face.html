@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 5px;
+        background-color: rgb(237, 225, 225);
+    }
+    header {
+        width: 100%;
+        border: 1px solid black;
+        height: 80px;
+        background-color: white;
+        position: fixed;
+        
+        
+    }
+    .leftheader {
+        float: left;
+        height: 50px;
+        width: 25%;
+    }
+    .leftheader img {
+        float: left;
+        height: 80px;
+        
+    }
+    .searchheader {
+        float: left;
+        padding: 20px 10px;
+        height: 50px;
+        
+        
+    }
+    .inputheader {
+        height: 30px;
+        width: 230px;
+        border-radius: 10px;
+    }
+    .btnheader {
+        height: 30px;
+        width: 60px;
+    }
+
+    .centerheader {
+        float: left;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 15px;
+       
+    }
+    
+    .rightheader {
+        display: flex;
+        justify-content: center;
+        float: right;
+        width: 25%;
+    }
+    .container {
+        background-color: rgb(218, 156, 156);
+    }
+    .leftnav {
+        float: left;
+        width: 20%;
+        border: 1px solid black;
+        height: 500px;
+        margin-top: 80px;
+        
+        
+    }
+    .leftnav ul li {
+        font-size: 27px;
+        list-style-type: none;
+        line-height: 1.5;
+        
+    }
+    .leftnav a {
+        text-decoration: none;
+        display: block;
+    }
+    .leftnav a:hover {
+        background-color: rgb(246, 208, 208);
+        
+    }
+    .content {
+        width: 50%;
+        float: left;
+        border: 1px solid black;
+        height: 700px;
+        margin-top: 80px;
+        margin-left: 40px;
+        margin-right: 5px;
+    }
+    .upcontent {
+        background-color: white;
+        margin: 30px;
+        padding: 10px;
+        height: 150px;
+        border-radius: 15px;
+    }
+
+    .upcontent input {
+       
+        height: 50px;
+        width: 600px;
+        border-radius: 15px;
+        margin-left: 35px;
+        font-size: 20px;
+        
+    }
+    .down-upcontent {
+        
+        padding: 20px;
+        margin-top: 10px;
+    }
+    .upcontent span {
+        
+        font-size: 25px;
+        border-radius: 5px;
+        margin-left: 60px;
+    }
+    .upcontent span a {
+        text-decoration: none;
+    }
+    .upcontent span:hover {
+        background-color: rgb(230, 209, 209);
+    }
+    .post {
+        background-color: white;
+        margin: 30px;
+        padding: 10px;
+        height: 450px;
+        border-radius: 15px;
+        font-size: 25px;
+        
+    }
+    .post a {
+        text-decoration: none;
+    }
+   .like {
+        text-align: center;
+   }
+    .like a {
+        
+        text-align: center;
+        padding: 10px 40px;
+        
+      
+    }
+    .like a:hover {
+        background-color: rgb(226, 206, 206);
+        
+    }
+
+    .right {
+        float: right;
+        width: 24%;
+        border: 1px solid black;
+        height: 500px;
+        margin-top: 80px;
+    }
+    .contact a, .contact li {
+        text-decoration: none;
+        display: block;
+      
+    }
+    .contact ul {
+        font-size: 27px;
+        
+    }
+    .contact a:hover {
+        background-color: rgb(223, 202, 202);
+    }
+</style>
+<body>
+    <header>
+        <div class="leftheader">
+            <img src="/img/face crop/facebook-icon-logo-vector-400x400.webp" alt="">
+            <div class="searchheader">
+                <input class="inputheader" type="text" placeholder="Search">
+                <button class="btnheader" type="submit" >Search</button>
+            </div>
+        </div>
+        <div class="centerheader">
+            <a href="#"><img src="/img/face crop/home.jpg" alt=""></a>
+            <a href="#"><img src="/img/face crop/222.jpg" alt=""></a>
+            <a href="#"><img src="/img/face crop/3.jpg" alt=""></a>
+            <a href="#"><img src="/img/face crop/4.jpg" alt=""></a>
+        </div>
+        <div class="rightheader">
+            <a href=""><img src="/img/face crop/msg.jpg" alt=""></a>
+            <a href=""><img src="/img/face crop/tb.jpg" alt=""></a>
+            <a href=""><img src="/img/face crop/avartar.jpg" alt=""></a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="leftnav">
+            <div>
+                <ul>
+                    <li><a href="">Bạn bè</a> </li>
+                    <li><a href="">Nhóm</a> </li>
+                    <li><a href="">Reel</a> </li>
+                    <li><a href="">Gần đây nhất</a> </li>
+                    <li><a href="">Market place</a> </li>
+                    <li><a href="">Watch</a> </li>
+                    <li><a href="">Kỷ Niệm</a> </li>
+                    <li><a href="">Đã lưu</a></li>
+                    <li><a href="">Xem thêm</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="upcontent">
+                <a href=""><img src="/img/face crop/avartar.jpg" alt=""></a> <input type="text" placeholder="Bạn đang nghĩ gì thế?">
+                <div class="down-upcontent"><span><a href=""> Video trực tiếp</a></span>
+                <span><a href="">Ảnh/Video</a></span>
+                <span><a href=""> Feeling/Activity</a></span>
+                </div>
+            </div>
+            <div class="post">
+                <a href=""><img src="/img/face crop/avartar.jpg" alt="">Hoang Ha</a>
+                <p>Đôi khi, một điểm yếu của ai đó lại trở thành điểm mạnh vững chãi nhất của họ. Có ưu điểm là một điều tốt nhưng nếu có
+                thể biến khuyết điểm thành lợi thế lại càng là một điều kỳ diệu hơn. 
+                </p>
+                <p>Đôi khi, một điểm yếu của ai đó lại trở thành điểm mạnh vững chãi nhất của họ. Có ưu điểm là một điều tốt nhưng nếu
+                    có thể biến khuyết điểm thành lợi thế lại càng là một điều kỳ diệu hơn.<br><br> Sưu tầm</p> <hr>
+                <div class="like">
+                    <span><a href="">Like</a> </span>
+                    <span><a href="">Comment</a> </span>
+                    <span><a href="">Share</a> </span>
+                    
+                </div>
+            </div>
+                
+        </div>
+        <div class="right">
+            <div class="contact">
+                <ul>
+                    <li>Người liên hệ :</li>
+                    <br>
+                    <li><a href="">Kiều Oanh</a> </li>
+                    <li><a href="">Nhung Trương</a> </li>
+                    <li><a href="">Pham Thanh Son</a> </li>
+                    <li><a href="">Thiên Ninh</a> </li>
+                    <li><a href="">Trang Hạ</a> </li>
+                    <li><a href="">Vy Oanh</a> </li>
+                    <li><a href="">Nhung TT</a> </li>
+                    <li><a href="">Thanh Son</a> </li>
+                    <li><a href="">Thiên Sơn</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
