@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3b79043855.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+   
+    .header {
+        background-color: purple;
+        
+    }
+    .all::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .left {
+        float: left;
+        border: 1px solid black;
+        height: 200px;
+        width: 25%;
+    }
+    .left ul li {
+        border: 1px solid black;
+        margin-bottom: 5px;
+        position: relative;
+    }
+    .content {
+        border: 1px solid black;
+        float: left;
+        width: 50%;
+        height: 400px;
+    }
+    .right {
+        float: right;
+        border: 1px solid black;
+        width: 25%;
+        height: 300px;
+    }
+    .footer {
+        border: 1px solid black;
+        height: 50px;
+    }
+    @media (max-width: 800px) {
+        .right {
+            display: none;
+        }
+    }
+    /* For mobile phones: */
+    [class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+/* [class*="col-"] {
+  width: 100%;
+} */
+
+    
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+
+</style>
+<body>
+    <div class="header">
+        <h1>Chania</h1>
+    </div>
+    <div class="all">
+        <div class="col-12 left">
+            <ul>
+                <li><i style="color: red;" class="fa-solid fa-house"></i>Flight</li>
+                <li>☞City</li>
+                <li>Island</li>
+                <li>Food</li>
+            </ul>
+        </div>
+        <div class="col-12 content">
+            <h2>The City</h2>
+            <p></p>
+        </div>
+        <div class="col-12 right">
+            <h2>What?</h2>
+            <p>abc</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Resize the browser window to see how the content respond to the resizing.</p>
+    </div>
+</body>
+</html>
