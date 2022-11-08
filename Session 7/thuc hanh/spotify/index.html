@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3b79043855.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    body {
+        font-family: helvetica;
+        margin: 0px;
+        background-color: rgb(58, 54, 54);
+    }
+    .header {
+        background-color: black;
+        height: 65px;
+        margin-bottom: 0px;
+        position: fixed;
+    }
+    .header img {
+        height: 65px;
+        width: 240px;
+    }
+    .header-link {
+        background-color: black;
+        float: right;
+        width: 935px;
+        text-align: right;
+        font-family: helvetica;
+        font-size: 20px;
+        padding: 20px 17px;
+        clear: both;
+        position: relative;
+    }
+   .header-link a {
+        text-decoration: none;
+        color: rgb(214, 181, 181);
+        padding: 5px 20px;
+   } 
+   .top-hidden {
+        float: left;
+        margin-top: 0px;
+        margin-left: 0px;
+        text-align: left;
+        font-size: 20px;
+        color: white;
+        line-height: 30px;
+    }
+    .top-hidden li {
+        list-style-type: none;
+        position: relative;
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .top-hidden li a {
+        width: 120px;
+        margin-left: 0px;
+        height: 30px;
+        display: block;
+        text-decoration: none;
+        line-height: 30px;
+        color: white;
+    }
+    .top-hidden a {
+        text-decoration: none;
+        color:rgb(214, 181, 181)
+    }
+    .top-hidden a:hover {
+        display: block;
+        background-color: green;
+        color: black;
+    }
+    .top-hidden ul ul { position: absolute; top: 25px; left: 5px; visibility: hidden; }
+    .top-hidden ul li:hover ul {
+        visibility: visible;
+        background-color: green;
+    }
+    .top-hidden {visibility: visible;}
+   #white {
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+   }
+   .header-link a:hover {
+        color: white;
+   }
+   .left {
+        background-color: black;
+        width: 20%;
+        float: left;
+        position: fixed;
+        margin-top: 65px;
+   }
+   .left ul {
+        color: white;
+        width: 20%;
+        min-height: 600px;
+   }
+   .left li {
+        list-style-type: none;
+        width: 150px;
+   }
+   .left a {
+        text-decoration: none;
+        color: rgb(214, 181, 181);
+    
+   }
+   #li-white a {
+        color: white;
+   }
+   .left img {
+        margin-top: 20px;
+      
+   }
+   .left li a:hover {
+        color: white;
+   }
+   .content {
+        float: left;
+        background-color: rgb(58, 54, 54);
+        height: 700px;
+        width: 80%;
+        color: white;
+        margin-left: 20%;
+        margin-top: 65px;
+   }
+   .content h2 {
+        padding-left: 40px;
+   }
+   .grid-container1, .grid-container2 {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: rgb(58, 54, 54);
+        padding: 20px 20px;
+        padding-left: 48px;
+        gap: 20px 30px;
+    }
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgb(58, 54, 54);
+        padding: 0px;
+        height: 200px;
+        width: 150px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer {
+        background-color: black;
+        line-height: 60px;
+        width: 100%;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+    }
+    .footer p {
+        margin: 0;
+    }
+    @media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  .top-hidden {visibility: visible;}
+  .header-link, .left, .footer {visibility: hidden;}
+  .content {width: 100%; margin-left: 0px;}
+  .grid-item {
+    margin-left: 50px;
+  }
+  
+  .grid-container1, .grid-container2 {
+        grid-template-columns: auto auto;
+        width: 50%;
+        background-color: rgb(58, 54, 54);
+        padding: 0;
+        margin: 0;
+        gap: 20px 30px;
+        }
+    }
+   
+</style>
+<body>
+    <div class="row">
+        <div class="header">
+            <a href=""><img src="/img/face crop/spotify.jpg" alt=""></a> 
+            <div class="header-link">
+                <a href="https://www.spotify.com/vn-vi/premium/?utm_source=app&utm_medium=desktop&utm_campaign=upgrade">Premium</a>
+                <a href="https://support.spotify.com/vn-vi/">Support</a> 
+                <a href="https://www.spotify.com/vn-vi/download/windows/"> Download</a>
+                <a href="https://www.spotify.com/vn-vi/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign up</a>
+                <a id="white" href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F">Log in</a>
+            </div>
+            <div class="top-hidden">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-bars" style="color: white;"></i></a>
+                        <ul>
+                            <li><a href="https://www.spotify.com/vn-vi/premium/?utm_source=app&utm_medium=desktop&utm_campaign=upgrade">Premium</a></li>
+                            <li><a href="https://support.spotify.com/vn-vi/">Support</a></li>
+                            <li><a href="https://www.spotify.com/vn-vi/download/windows/"> Download</a></li>
+                            <li><a href="https://www.spotify.com/vn-vi/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign up</a></li>
+                            <li><a href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F">Log in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="left">
+            <ul>
+                <li id="li-white"><a href=""><img src="/img/face crop/home spotify.jpg" alt="">  Home</a></li>
+                <li><a href=""><img src="/img/face crop/search.jpg" alt="">  Search</a></li>
+                <li><a href=""><img src="/img/face crop/library.jpg" alt="">  Your Library</a></li>
+                <br>
+                <li><a href=""><img src="/img/face crop/created.jpg" alt="">  Created Plalist</a></li>
+                <li><a href=""><img src="/img/face crop/liked song.jpg" alt=""> Liked Song</a></li>
+            </ul>
+            
+        </div>
+        <div class="content">
+            <h2>Spotify Playlists</h2>
+            <div class="grid-container1">
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; " loading="lazy"></iframe></div> 
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUsuxWHRQd?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5Ejj0EkURtP?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+            </div>
+            <h2>Mood</h2>
+            <div class="grid-container2">
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3rxVfibe1L0?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9XIFQuFvzM4?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2pSTOxoPbx9?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+                <div class="grid-item"><iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcEKFjZJYZcc?utm_source=generator" width="150" height="200"
+                    frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright © 2022 Spotify AB. All Rights Reserved.<a href="https://www.instagram.com/spotify/"><img src="/img/face crop/instagram.jpg" alt="" width="30" height="30"></a>
+        <a href="https://twitter.com/spotify"><img src="/img/face crop/twister.jpg" alt="" width="30" height="30"></a>
+        <a href="https://www.facebook.com/SpotifyVietnam/?brand_redir=6243987495"><img src="/img/face crop/face.jpg" alt="" width="30" height="30"></a>
+        </p>
+    </div>
+</body>
+</html>
