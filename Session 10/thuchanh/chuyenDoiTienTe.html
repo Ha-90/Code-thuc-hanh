@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, th {
+        width: 700px;
+        text-align: center;
+    }
+    button {
+        width: 80px;
+        height: 20px;
+    }
+
+</style>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td ><input type="number" id="amount"></td>
+                <td><select name="" id="from">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+                    
+                </option></td>
+                <td><select name="" id="to">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </option></td>
+                <td><button type="button" onclick="changecurrency()">Convert</button></td>
+            </tr>
+        </table>
+    </form>
+    <P id="result"></P>
+</body>
+<script>
+    function changecurrency() {
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        if (from=="VND" && to=="USD") {
+            let vnd = parseFloat(document.getElementById("amount").value);
+            let result = vnd*(1/24850);
+            document.getElementById("result").innerHTML = result + " USD";
+        }
+        if (from=="USD" && to=="VND") {
+            let dola = parseFloat(document.getElementById("amount").value);
+            let result = dola*24850;
+            document.getElementById("result").innerHTML = result + " VND";
+        }
+        if (from == "VND" && to == "VND") {
+            document.getElementById("result").innerHTML = "1"; 
+        } 
+        if (from == "USD" && to == "USD") {
+            document.getElementById("result").innerHTML = "1"; 
+        }
+    }
+</script>
+</html>
