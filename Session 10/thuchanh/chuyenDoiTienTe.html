@@ -58,12 +58,10 @@
             let result = dola*24850;
             document.getElementById("result").innerHTML = result + " VND";
         }
-        if (from == "VND" && to == "VND") {
-            document.getElementById("result").innerHTML = "1"; 
+        if (from == to) {
+            alert("Vui lòng chọn lại loại tiền tệ chuyển đổi");
         } 
-        if (from == "USD" && to == "USD") {
-            document.getElementById("result").innerHTML = "1"; 
-        }
+       
     }
 </script>
 </html>
