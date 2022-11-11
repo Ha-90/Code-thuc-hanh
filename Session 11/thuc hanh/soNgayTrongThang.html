@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="month"> 
+        <button type="button" onclick="countdate()">Tính số ngày</button>
+    </form>
+</body>
+    <script>
+        function countdate() {
+        let m = parseInt(document.getElementById("month").value);
+        switch (true) {
+            case (m < 1 || m > 12):
+                alert("Nhập lại số tháng");
+                break;
+            case ((m == 1)||(m == 3)||(m == 5) || (m == 7)||(m == 8)|| (m == 10)|| (m == 12)):
+                document.write("Tháng " + m + " có 31 ngày");
+                break;
+            case (m == 2):
+                document.write("Tháng 2 có 28 hoặc 29 ngày");
+                break;         
+            default: 
+                document.write("Tháng " + m + " có 30 ngày");
+                 break;
+        }
+        }
+    </script>
+</html>
