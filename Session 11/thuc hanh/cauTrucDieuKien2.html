@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>Bài 1: Chuyển từ độ C sang độ F.
+°C x 9/5 + 32 = °F
+</p>
+    <input id="f" type="number" placeholder="Input degrees C">
+    <input type="button" value="Degrees F =" onclick="degreesF()"> 
+    <p id="result1"></p>
+    <br>
+<p>Bài 6: Giải phương trình bậc 1</p>
+    <input id="a" type="number" placeholder="a" style="width: 50px;"> X + <input id="b" type="number" placeholder="b" style="width: 50px;"> = 0
+    <input type="button" value="Result" onclick="ptbn()">
+    <p id="result6"></p>
+    <br>
+<p>Bài 7: Giải phương trình bậc 2</p>
+    <input id="a1" type="number" placeholder="a" style="width: 50px;"> X<sup>2</sup> + <input id="b1" type="number" placeholder="b" style="width: 50px;"> X + <input id="c1" type="number" placeholder="c" style="width: 50px;"> = 0
+    <input type="button" value="Result" onclick="ptbh()">
+    <p id="result7"></p>
+    <br>
+<p>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để
+a,b,c là cạnh của một tam giác là:
+a,b,c > 0 , a + b > c , b + c > a , a + c > b
+</p>
+    <input id="a2" type="number" placeholder="cạnh ab"> 
+    <input id="b2" type="number" placeholder="cạnh bc">
+    <input id="c2" type="number" placeholder="cạnh ac">
+    <input type="button" value="Check triangle" onclick="checkTriangle()">
+    <p id="result9"></p>
+    <br>
+<p>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng
+cho vay và lãi suất hàng tháng.</p>
+    <input id="amount" type="number" placeholder="Enter amount"> 
+    <select name="" id="month">
+        <option id="1month" value="1">1 Month (5.2%/Year)</option>
+        <option id="3month" value="3">3 Month (5.7%/Year)</option>
+        <option id="6month" value="6">6 Month (6.5%/Year)</option>
+        <option id="12month" value="12">12 Month (7.4%/Year)</option>
+    </select>
+    <input type="button" value="Search" onclick="interestRate()">
+    <p id="result12"></p>
+
+</body>
+<script>
+    function degreesF() {
+        let c = parseFloat(document.getElementById("f").value);
+        f = (c*9)/5 + 32;
+        document.getElementById("result1").innerHTML = "°F = " + f;
+    }
+    function ptbn() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        if ((a == 0) && (b != 0)) {
+            document.getElementById("result6").innerHTML = ("phương trình vô nghiệm");           
+        } 
+        else if ((a == 0) && (b == 0)) {
+            document.getElementById("result6").innerHTML = ("phương trình vô số nghiệm");
+        } 
+        else {
+            document.getElementById("result6").innerHTML = "X = " + -b/a;           
+        }
+    }
+    function ptbh() {
+        let a = parseInt(document.getElementById("a1").value);
+        let b = parseInt(document.getElementById("b1").value);
+        let c = parseInt(document.getElementById("c1").value);
+        let delta = (b ** 2) - (4 * a * c)
+        let x11 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x22 = (-b - Math.sqrt(delta)) / (2 * a);
+        switch (true) {
+            case (delta < 0):
+                document.getElementById("result7").innerHTML = "phương trình vô nghiệm";
+                break;
+            case (delta == 0):
+                document.getElementById("result7").innerHTML = "phương trình có nghiệm kép X1 = X2 = " + -b/(2*a);
+                break;
+            case (delta > 0):
+                document.getElementById("result7").innerHTML = "X1 = "+x11 + ", X2 = " +x22;
+                break;
+        }
+    }
+    function checkTriangle() {
+        let a = parseFloat(document.getElementById("a2").value);
+        let b = parseFloat(document.getElementById("b2").value);
+        let c = parseFloat(document.getElementById("c2").value);
+        if (((a && b && c) > 0) &&(a + b > c) && (b + c > a) && (a + c > b)) {
+            document.getElementById("result9").innerHTML = "This is a triangle";
+        }
+        else {
+            document.getElementById("result9").innerHTML = "This is not a triangle";
+        }
+    }
+    function interestRate() {
+       let money = parseFloat(document.getElementById("amount").value);
+       let m = parseFloat(document.getElementById("month").value);
+       let m1 = parseFloat(document.getElementById("1month").value); 
+       let m3 = parseFloat(document.getElementById("3month").value); 
+       let m6 = parseFloat(document.getElementById("6month").value); 
+       let m12 = parseFloat(document.getElementById("12month").value); 
+       let r1 = money * (0.052 / 12);
+       let r3 = money * (0.057 / 12);
+       let r6 = money * (0.065 / 12);
+       let r12 = money * (0.074 / 12);
+       switch(true) {
+        case (m == m1):
+            document.getElementById("result12").innerHTML = "monthly interest rate: " + r1 + " vnd";
+            break;
+        case (m == m3):
+            document.getElementById("result12").innerHTML = "monthly interest rate: " + r3 + " vnd";
+            break;
+        case (m == m6):
+            document.getElementById("result12").innerHTML = "monthly interest rate: " + r6 + " vnd";
+            break;
+        case (m == m12):
+            document.getElementById("result12").innerHTML = "monthly interest rate: " + r12 + " vnd";
+            break;
+       }
+    }
+</script>
+</html>
