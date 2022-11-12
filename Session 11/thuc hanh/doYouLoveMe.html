@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    h1 {
+        text-align: center;
+    }
+    input {
+        position: absolute;
+        font-size: 30px;
+    }
+</style>
 <body>
-    
+    <h1>Do you love me?</h1>
+    <input style="left: 600px; top: 100px;" type="button" value="yes" onclick="ok()">
+    <input style="left: 700px; top: 100px;" type="button" value="no" onmouseover="no()" id="btnNo">
 </body>
+<script>
+    function ok() {
+        document.write("I LOVE YOU TOO!!! <3");
+    }
+    function no() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById("btnNo").style.left = x + 'px';
+        document.getElementById("btnNo").style.top = y + 'px';
+    }
+</script>
 </html>
