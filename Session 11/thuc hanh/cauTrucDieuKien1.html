@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p>Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không
+</p>
+    <input id="a" type="number"> <input id="b" type="number"> 
+    <input type="button" value="check" onclick="mod()">
+    <br><br>
+<p>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10</p>
+    <input id="age" type="number"> <input type="button" value="check" onclick="checkAge()">
+    <br><br>
+<p>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là
+lớn hay nhỏ hơn 0</p>
+    <input id="number" type="number"> <input type="button" value="check" onclick="checknumber()">
+    <br><br>
+<p>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</p>
+    <input id="number1" type="number" placeholder="number 1"> 
+    <input id="number2" type="number" placeholder="number 2"> 
+    <input id="number3" type="number" placeholder="number 3">
+    <input type="button" value="Find max" onclick="maxnumber()">
+    <br><br>
+<p>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi
+cuối kỳ
+</p>
+    <input id="dkt" type="number" placeholder="Điểm kiểm tra">
+    <input id="dtgk" type="number" placeholder="Điểm thi giữa kỳ">
+    <input id="dtck" placeholder="Điểm thi cuối kỳ" type="number">
+    <input type="button" value="Xếp hạng" onclick="level()">
+    <br><br>
+<p>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+</p>
+    <input id="sales" type="number" placeholder="Sales output">
+    <input type="button" value="Commission" onclick="commission()">
+
+</body>
+<script>
+    function mod() {
+    let a = parseInt(document.getElementById("a").value);
+    let b = parseInt(document.getElementById("b").value);
+    let c = a%b;
+    if (c == 0) {
+        alert(a + " divisible " + b);
+    } else {
+        alert(a + " not divisible " + b);
+    }
+    }
+    function checkAge() {
+        let t = parseInt(document.getElementById("age").value);
+        if (t >= 16) {
+            alert("Be old enough to study in grade 10")
+        } else {
+            alert("Not old enough for 10th grade")
+        }
+    }
+    function checknumber() {
+        let a = parseInt(document.getElementById("number").value);
+        if (a > 0) {
+            alert(a + " great than 0");
+        }
+        else if (a < 0) {
+            alert(a + " less than 0");
+        } else {
+            alert(a + " = 0");
+        }
+        }
+    function maxnumber() {
+        let a = parseInt(document.getElementById("number1").value);
+        let b = parseInt(document.getElementById("number2").value);
+        let c = parseInt(document.getElementById("number3").value);
+        if (a>=b && a>=c) {
+            alert(a + " is the largest number");
+        }
+        else if (b>=a && b>=c) {
+            alert(b + " is the largest number");
+        } else {
+            alert(c + " is the largest number");
+        }
+    }
+    function level() {
+        let dkt = parseFloat(document.getElementById("dkt").value);
+        let dtgk = parseFloat(document.getElementById("dtgk").value);
+        let dtck = parseFloat(document.getElementById("dtck").value);
+        let tb = (dkt + dtgk + dtck)/3;
+        if ((tb >= 8) && ((dkt && dtgk && dtck) >= 6.5)) {
+            alert("Xếp loại GIỎI");
+        } 
+        else if ((6.5 <= tb) && ((dkt && dtgk && dtck) >=5)) {
+            alert("Xếp loại KHÁ")
+        }
+        else if ((5 <= tb) && ((dkt && dtgk && dtck) >= 3.5)) {
+            alert("Xếp loại TRUNG BÌNH")
+        }
+        else {
+            alert("Xếp loại YẾU")
+        }
+    } 
+    function commission() {
+        let a = parseFloat(document.getElementById("sales").value);
+        if (a <= 50000000) {
+            alert("Commission is 5%");
+        }
+        else if ((50000000 <= a) && (a <= 100000000)) {
+            alert("Commission is 10%");
+        }
+        else {
+            alert("Commission is 15%")
+        }
+    }
+    
+
+</script>
+</html>
