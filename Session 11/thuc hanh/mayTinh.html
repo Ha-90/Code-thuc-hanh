@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        margin: 5px;
+        width: 30px;
+    }
+    #result {
+        width: 155px;
+    }
+</style>
+<body>
+<div>
+    <input type="text" id="result"><br>
+    <input type="button" value="1" onclick="display(value)">
+    <input type="button" value="2" onclick="display(value)">
+    <input type="button" value="3" onclick="display(value)">
+    <input type="button" value="+" onclick="display(value)"><br>
+    <input type="button" value="4" onclick="display(value)">
+    <input type="button" value="5" onclick="display(value)">
+    <input type="button" value="6" onclick="display(value)">
+    <input type="button" value="-" onclick="display(value)"><br>
+    <input type="button" value="7" onclick="display(value)">
+    <input type="button" value="8" onclick="display(value)">
+    <input type="button" value="9" onclick="display(value)">
+    <input type="button" value="*" onclick="display(value)"><br>
+    <input type="button" value="C" onclick="reset()">
+    <input type="button" value="0" onclick="display(value)">
+    <input type="button" value="=" onclick="equal()">
+    <input type="button" value="/" onclick="display(value)">
+</div>
+</body>
+<script>
+    function reset() {
+            document.getElementById("result").value = "";
+        }
+    function display(value) {
+        document.getElementById("result").value += value;
+    }
+    function equal() {
+        let a = document.getElementById("result").value;
+        let b = eval(a);
+        document.getElementById("result").value = b;
+    }
+    
+
+</script>
+</html>
