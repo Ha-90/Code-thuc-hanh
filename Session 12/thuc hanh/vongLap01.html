@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã
+hoàn thành.
+<script>
+    for (i = 1; i <= 100; i++) {     
+        document.write(i + ", ");
+        if (i == 99) {
+            alert("Finished!");
+        }
+    }
+</script> -->
+<!-- Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.
+Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu
+cầu người dùng tăng nhiệt độ.
+<script>
+    let c = parseFloat(prompt("Nhập vào nhiệt độ hiện tại"));
+    if (c > 100) {
+        alert("Hãy giảm nhiệt độ.")
+    }
+    if (c < 20) {
+        alert("Hãy tăng nhiệt độ.")
+    }
+</script> -->
+<!-- Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+<script>
+    let a1 = 0;
+    let a2 = 1;
+    let sumnext = "";
+    for (i = 1; i <= 20; i++) {
+        sumnext = a1 + a2;
+        document.write(sumnext + ", ");
+        a1 = a2;
+        a2 = sumnext;
+    }        
+</script> -->
+<!-- Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+<script>
+    let a1 = 0;
+    let a2 = 1;
+    let sumnext = "";
+    let c = sumnext % 5;
+    for (i = 1; i <= 20; i++) {
+        sumnext = a1 + a2;
+        a1 = a2;
+        a2 = sumnext;
+    }
+    if (c == 0) {
+        document.write("số đầu tiên chia hết cho 5 là: " + c);
+    }       
+</script> -->
+<!-- Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+<script>
+    let a1 = 0;
+    let a2 = 1;
+    let sumnext = "";
+    let total; 
+    for (i = 1; i <= 20; i++) {
+        sumnext = a1 + a2;
+        c = document.write(sumnext + ", ");
+        a1 = a2;
+        a2 = sumnext;
+    }
+</script> -->
+<!-- Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+<script>
+    
+    let sum = 0;
+    for (i = 1; i <= 30; i++) {
+        sum = sum + 7*i;
+    }
+    document.write(sum);
+</script> -->
+<!-- Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra
+"Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ
+"FizzBuzz".
+<br>
+<script>
+    for (i = 1; i <= 100; i++) {
+        if (i % 3 == 0) {
+            document.write("Fizz" + "<br>");
+            if (i % 5 == 0) {
+                document.write("Buzz" + "<br>");
+                if ( i % 3 == 0 && i % 5 == 0) {
+                    document.write("FizzBuzz" + "<br>");
+                }
+            }
+        }
+        else {
+            document.write(i + "<br>");
+        }
+    }
+</script> -->
+Bài 8: Game đoán số
+<button type="button" onclick="game()">Play</button>
+<script>   
+    function game() {
+        let random = Math.floor(Math.random() * 10);
+        console.log(random);
+        let num = parseInt(prompt("Input a number you like: 0~9"));
+        if (num < 0 || num > 9) {
+            alert("もう一度 記入してください");
+        } else
+        if (num == random) {
+            alert("おめでとうございます！");
+        } 
+        else if (num > random) {
+            alert("高かった");           
+        } 
+        else {
+            alert("低った");
+        }
+    }
+</script>
+</body>
+</html>

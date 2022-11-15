@@ -11,6 +11,7 @@
         border: 1px solid black;
         width: 500px;
         padding: 10px;
+        text-align: center;
     }
 </style>
 <body>
@@ -34,7 +35,7 @@
     for (let i = 1; i <= 9; i++) {
         board = board + "<tr>";
         for (let j = 2; j <= 9; j++) {
-        board = board + "<td>" + j + "x" + i + "=" + j*i + "</td>";
+            board = board + "<td>" + j + "x" + i + "=" + j*i + "</td>";
         }
     }
         board = board + "</tr>";
