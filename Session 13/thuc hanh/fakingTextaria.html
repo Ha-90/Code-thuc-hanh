@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fake()">
+    <h2>Type anything slowly</h2>
+    <textarea id="text" cols="40" rows="10" ></textarea>
+</body>
+<script>
+    let array = [];
+    let chuoi = " Bạn đang rất nỗ lực!"
+    array = chuoi.split("");
+    let str = "";
+    console.log(array);
+
+    function fake() {
+        let text= document.getElementById("text").value;
+        for (i = 1; i <= text.length; i++) {
+            str = str + array[i];
+            if (i == 21) {
+                str = "";
+            }
+        }
+        document.getElementById("text").value = str;
+        str = "";
+        setTimeout(fake, 1);
+    }
+</script>
+</html>
