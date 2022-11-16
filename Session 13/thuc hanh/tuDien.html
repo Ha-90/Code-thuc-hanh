@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+</body>
+<script>
+    let arr_viet = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+    let arr_eng = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]; 
+        
+    let words = prompt("input a word");   
+        for (i = 0; i < arr_eng.length; i++) {
+            if (words == arr_eng[i]) {
+                document.getElementById("result").innerHTML= arr_viet[i];
+                break;
+            }
+            if (words != arr_eng[i])
+                document.getElementById("result").innerHTML = "Khong tim thay ket qua"
+        }
+</script>
+</html>
