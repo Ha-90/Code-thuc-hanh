@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<!-- Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với
+nhau. Ví dụ có mảng chuỗi như sau: myColor = ["Red", "Green", "White", "Black"];
+Sau khi thực thi chương trình sẽ trả về dạng như sau : "Red,Green,White,Black"
+<br><br>
+<script>
+    let myColor = ["Red", "Green", "White", "Black"];
+    let myColor1 = myColor.join();
+    document.write(myColor1);
+</script> -->
+<!-- Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2 số chẵn. Ví dụ nếu bạn
+nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.
+<br><br>
+<script>
+    let number = (prompt("Nhap vao day so bat ky"));
+    let arr = number.split("");
+    let arr_new = "";
+    console.log(arr);
+    for (i = 0; i < arr.length; i++) {
+        if (parseInt(arr[i]) % 2 == 0 && parseInt(arr[i + 1]) % 2 == 0) {
+            arr_new = arr_new + arr[i] + "-";
+        }
+        else { arr_new = arr_new + arr[i]};
+    }
+    document.write(arr_new);
+</script> -->
+Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa
+nhập sang thành dạng chữ hoa. Ví dụ: nếu bạn nhập vào chuỗi 'The Quick Brown Fox' kết quả của
+chương trình là 'tHE qUICK bROWN fOX'
+<br><br>
+<script>
+    let text = prompt("Nhap vao 1 cau bat ky");
+    let cut_text = text.split("");
+    console.log(cut_text);
+    let result = "";
+    for (i = 0; i < cut_text.length; i++) {
+        if (cut_text[i] == cut_text[i].toUpperCase()) {
+            result = result + cut_text[i].toLowerCase();
+        }
+        else {
+            result = result + cut_text[i].toUpperCase();
+        }
+    }
+    document.write(result)
+    
+</script>
+</html>
