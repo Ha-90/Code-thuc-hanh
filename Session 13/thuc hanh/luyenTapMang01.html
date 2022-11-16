@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Bài 1: Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình
+thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+<script>
+    let array = [1, 2, 3, 4, 5, 10, 11, 22, 33, 44];
+
+    for (i = 0; i < array.length; i++) {
+        if (array[i] > 10) {
+            document.write(array[i] + ",");
+    }
+    }
+</script> -->
+<!-- Bài 2: Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần
+tử đó.
+<br>
+<script>
+    let array = [10, 20, 30, 40, 50, 60, 43, 54, 46, 9];
+    let max = array[0];
+    let position = 0;
+
+    for (i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+            position = i;
+        }
+    }
+    document.write("max: " + max + ", position: " + position );
+</script> -->
+<!-- Bài 3: Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong
+mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+<br>
+<script>
+    let array = [5, 10, 15, 20, 25];
+    console.log(array.length);
+    let max = array[0];
+    let sum = array[0];
+
+    for (i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+            sum += array[i];
+        }
+    }
+    document.write("max: " + max + ", average: " + sum / array.length)
+</script> -->
+<!-- Bài 4: Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các
+phần tử trong mảng đó.
+<br>
+<input type="text" id="x">
+<input type="button" value="Thêm số" id="add_number" onclick="addNumber()">
+<input type="button" value="Đảo dãy" id="reverse_array" onclick="reverseArray()">
+<br>
+<script>
+    let x = 0;
+    let array = Array();
+    
+    function addNumber() {
+        array[x] = document.getElementById("x").value;
+        console.log(x);
+        alert("Đã thêm " + array[x] + " vào mảng ở vị trí " + x);
+        x++;
+    }
+    function reverseArray() {
+        let reverse_array = array.reverse();
+        document.write(reverse_array);
+    }
+</script> -->
+
+</body>
+</html>
