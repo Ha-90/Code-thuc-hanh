@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<!-- Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn, in ra
+    <!-- Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn, in ra
 các phần tử trong mảng.
 <script>
     let arr = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
@@ -21,7 +23,7 @@ các phần tử trong mảng.
         }
     }
 </script> -->
-<!-- Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    <!-- Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
 Ví dụ, nếu một mảng chứa các ký tự [ 'c', 's', 'c', '2', '6', '1' ]
 sau khi thực hiện đảo ngược sẽ là "162csc".
 <br>
@@ -30,7 +32,7 @@ sau khi thực hiện đảo ngược sẽ là "162csc".
     let reverse_array = array.reverse();
     document.write(reverse_array.join(""));
 </script> -->
-<!-- Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    <!-- Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
 Chương trình này đếm số ký tự số trong mảng.
 <br>
 <script>
@@ -44,12 +46,40 @@ Chương trình này đếm số ký tự số trong mảng.
     }
     document.write(count);
 </script> -->
-<!-- Bài 4: Viết một chương trình để đếm số từ trong một chuỗi.
+    <!-- Bài 4: Viết một chương trình để đếm số từ trong một chuỗi.
 <br>
 <script>
     let array = ["Tùng", "Cúc", "Trúc", "Mai"];
     document.write("Số từ trong chuỗi " + array[0] + " là " + array[0].length);
 </script>
 </body> -->
+    <!-- Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có
+    giống nhau hay không.
+    <br>
+    <script>
+        let a = prompt("Nhap vao chuoi thu 1");
+        let b = prompt("Nhap vao chuoi thu 2");
+
+        switch (true) {
+            case (a == b):
+                alert("2 chuoi GIONG nhau");
+                break;
+            case (a != b):
+                alert("2 chuoi KHONG GIONG nhau");
+                break;
+        }
+    </script> -->
+    <!-- Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là
+    (-) và thay thế các ký tự này bởi ký tự ( _ )
+    <br>
+    <script>
+        let text = prompt("Nhap vao cau bat ky");
+        let letter = text.toString();
+        console.log(letter);
+        let array = letter.split("-").join("_");
+        console.log(array);
+        document.write(array);
+    </script> -->
+</body>
 
 </html>

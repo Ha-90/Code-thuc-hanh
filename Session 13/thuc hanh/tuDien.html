@@ -13,14 +13,21 @@
     let arr_viet = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
     let arr_eng = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]; 
         
-    let words = prompt("input a word");   
-        for (i = 0; i < arr_eng.length; i++) {
-            if (words == arr_eng[i]) {
-                document.getElementById("result").innerHTML= arr_viet[i];
-                break;
-            }
-            if (words != arr_eng[i])
-                document.getElementById("result").innerHTML = "Khong tim thay ket qua"
+    // let words = prompt("input a word");   
+    //     for (i = 0; i < arr_eng.length; i++) {
+    //         if (words == arr_eng[i]) {
+    //             document.getElementById("result").innerHTML= arr_viet[i];
+    //             break;
+    //         }
+    //         if (words != arr_eng[i])
+    //             document.getElementById("result").innerHTML = "Khong tim thay ket qua"
+    //     }
+    let input = prompt("Nhap tu muon dich");
+
+    for (const key in arr_eng) {
+        if (input == arr_eng[key]) {
+            document.write(arr_viet[key]);
         }
+    }
 </script>
 </html>
