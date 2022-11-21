@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    let arr3 = [];
+    let arr4 = [0, 0, 0, 0, 0, 0];
+
+    function minOfArray(arr) {
+        if (arr.length == 0) {
+            document.write("arr is empty. ");
+        }
+        let min = arr[0];
+        for (i=1; i < arr1.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            } 
+        }
+        return min;
+    }
+    let min1 = minOfArray(arr1);
+    document.write("min arr1 is " + min1);
+    document.write("<br>");
+
+    let min2 = minOfArray(arr2);
+    document.write("min arr2 is " + min2);
+    document.write("<br>");
+
+    let min3 = minOfArray(arr3);
+    document.write("min arr3 is " + min3);
+    document.write("<br>");
+
+    let min4 = minOfArray(arr4);
+    document.write("min arr4 is " + min4);
+    document.write("<br>");    
+</script>
+</html>

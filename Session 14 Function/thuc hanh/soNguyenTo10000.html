@@ -13,23 +13,23 @@
     let n = parseInt(prompt("Kiem tra so nguyen to"));
     function isPrime(n){
         if (n <= 1) {
-            return false;
             document.write(n + " khong la so nguyen to");
+            return false;
         } 
-        else if (n == 2) {
-            return true;
+        else if (n === 2) {
             document.write(n + " la so nguyen to");
+            return true;
         } 
         else {
             for (var x = 2; x < n; x++) {
                 if (n % x == 0) {
-                    return false;
                     document.write(n + " khong la so nguyen to");
+                    return false;
                 }
             }
-        }   return true;
             document.write(n + " la so nguyen to");
+        }   return true;
     }
-    isPrime(n);
+isPrime(n);
 </script>
 </html>
