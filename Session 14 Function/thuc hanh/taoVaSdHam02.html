@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bai 8:
+    <input type="number" id="inputNumber"> <input type="button" value="Add" onclick="inputNumber()">
+    <input type="button" value="Reverse" onclick="reverseNumber()">
+    <p id="result"></p>
+    <br>
+    Bai 9:
+    <input type="text" id="inputcharacter1"> <input type="button" value="Add Character" onclick="inputCharacter()">
+    <input type="text" id="inputcharacter2"> <input type="button" value="Check Character" onclick="checkCharacter()">
+</body>
+<!-- Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây
+dựng được.
+<script>
+    function square(num) {
+        alert(num*num);
+    }
+    let num = parseInt(prompt("Nhap so muon tinh binh phuong"));
+    square(num);
+</script> -->
+<!-- Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+<br>
+<script>
+    function circleArea(r) {
+        document.write("circleArea = " + Math.PI*r);
+    }
+    function circlePerimeter() {
+        document.write("circlePerimeter = " + Math.PI*2*r);
+    }
+    let r = parseInt(prompt("Nhap ban kinh r = ?"));
+    circleArea(r);
+    document.write("<br>");
+    circlePerimeter();
+</script> -->
+<!-- Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa
+xây dựng được.
+<br>
+<script>
+    let a = 1;
+    function factorial(num) {
+        for (i = 1; i <= num; i++) {
+            a = a*i;
+        }
+    }
+    let num = parseInt(prompt("Nhap so muon tinh giai thua"))
+    factorial(num);
+    document.write(a);
+</script> -->
+<!-- Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự
+số hàm trả về true, ngược lại trả về false.
+<br>
+<script>
+    function checker(character) {
+        if (isNaN(character) == true) {
+            document.write("false");
+        }
+        // if (isNaN(character) == false)
+        else {
+            document.write("true");
+        }
+    }
+    let character = prompt("Nhap vao ky tu bat ky so/chu");
+    checker(character);
+</script> -->
+<!-- Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+<br>
+<script>
+    function isMin() {
+        if (num1 <= num2 && num1 <= num3) {
+            document.write(num1 + " is min");
+        }
+        if (num2 <= num1 && num2 <= num3) {
+            document.write(num2 + " is min");
+        }
+        if (num3 <= num1 && num3 <= num2) {
+            document.write(num3 + " is min");
+        }
+    }
+    let num1 = parseInt(prompt("Nhap so thu 1"));
+    let num2 = parseInt(prompt("Nhap so thu 2"));
+    let num3 = parseInt(prompt("Nhap so thu 3"));
+    isMin();
+</script> -->
+<!-- Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên
+dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+<br>
+<script>
+    function checkNumber() {
+        if (inputNumber >= 0) {
+            document.write(inputNumber + " la so nguyen duong");
+        }
+        else {document.write(inputNumber + " la so nguyen am")};
+    }
+    let inputNumber = parseInt(prompt("Nhap vao so bat ky"));
+    checkNumber();
+</script> -->
+<!-- Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+<br>
+<script>
+    function changePlace (a, b) {
+        document.write(a + "," + b);
+        // document.write("truoc khi doi cho: " + a, b);
+        document.write("<br>");
+        let temp = a;
+        a = b;
+        b = temp;
+        document.write(a + "," + b);
+        // document.write("sau khi doi cho: " + b, a);
+    }
+    let a = parseInt(prompt("Nhap so nguyen thu 1"));
+    let b = parseInt(prompt("Nhap so nguyen thu 2"));
+    changePlace(a, b);
+</script> -->
+<!-- Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số
+nguyên đó.
+<br>
+<script>
+    let arr = [];
+    function inputNumber() {
+        arr.push(document.getElementById("inputNumber").value);
+        console.log(arr);
+    }
+    function reverseNumber() {
+        arr.reverse();
+        console.log(arr);
+    }
+    inputNumber();
+    reverseNumber();    
+</script> -->
+<br>
+Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự
+bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu
+không trả về -1.
+<br>
+<script>
+    let array = [];
+    let count = 0;
+    function inputCharacter() {
+        array.push(document.getElementById("inputcharacter1").value);
+        console.log(array);
+    }
+    function checkCharacter() {
+        let character = document.getElementById("inputcharacter2").value;
+        for (i = 0; i < array.length; i++) {
+            if (character === array[i]) {
+                count++;
+                document.write(count);
+                break;
+            }
+            else if (i == array.length-1) {
+                document.write("-1");
+                count = 0;
+            }
+        }
+    }
+</script>
+</html>
