@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let words = [];
+        let convertWords = [];
+        function isPalindrome() {
+            let text = prompt("Hay nhap vao 1 tu bat ky");
+            // let words = text.split('');
+
+            console.log(text);
+            // console.log(words);
+            
+            // for (i = 0; i < words.length / 2; i++) {
+                for (i = 0; i < text.length/2; i++) {
+                    if (text[i] == text[text.length-1-i]) {
+                // if (words[i] == words[words.length - 1 - i]) {
+                    alert("true");
+                   break;
+                }
+                else {
+                    alert("false");
+                    break;
+                }
+            }
+        }
+        isPalindrome();
+    </script>
+</body>
+</html>
