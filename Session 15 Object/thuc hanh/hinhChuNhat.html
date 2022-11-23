@@ -7,25 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="myCanvas" height="200" width="400" style="border: 5px solid rgb(234, 18, 18);"></canvas>
+    <canvas id="myCanvas" height="200" width="400" style="border: 1px solid black;"></canvas>
 </body>
 <script>
-    function Rectangle(x, y){
-        this.x = x;
-        this.y = y;
+    function Rectangle(width, height){
+        this.width = width;
+        this.height = height;
         this.getArea = function() {
-            return x*y;
+            return this.width * this.height;
         }
         this.getPerimeter = function() {
-            return x+y;
+            return (this.width + this.height)*2;
         }
     }
     function createRectangle() {
         let ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(50,50,100,50);
     }
-    let rectangle = new Rectangle(400, 200);
-    let perimeter = rectangle.getPerimeter();
+    function createCircle() {
+        let ctxCircle = document.getElementById("myCanvas").getContext("2d");
+        ctxCircle.fillStyle = "blue";
+        ctxCircle.arc(300,100,50,0,2*Math.PI);
+        ctxCircle.fill();
+    }
+    let rectangle = new Rectangle(300, 200);
     let area = rectangle.getArea();
-    alert("perimeter: " + perimeter + "; area: " + area);
+    let perimeter = rectangle.getPerimeter();
+    alert("area of rectangle: " + rectangle.getArea() + ", perimeter of rectangle: " + rectangle.getPerimeter());
+        rectangle.width = 400;
+        rectangle.height = 300;
+    alert("sau thay doi: dien tich = " + rectangle.getArea() + ", chu vi = " + rectangle.getPerimeter());
+    createRectangle();
+    createCircle();
 </script>
 </html>
