@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Mobile(battery, draft, receive, sent, status) {
+            this.battery = battery;
+            this.draft = draft;
+            this.receive = receive;
+            this.sent = [];
+            this.status = status;
+
+            this.checkStatus = function () {
+                if (this.status == false) {
+                    console.log("Dien thoai dang tat");
+                }
+                else {
+                    console.log("Dien thoai dang bat");
+                }
+            }
+            this.turnMobile = function (stt) {
+                if (stt == true) {
+                    this.status = true;
+                    console.log("your phone is ON");
+                    return stt;
+                } else {
+                    this.status = false;
+                    console.log("your phone is OFF");
+                    return stt;
+                }
+            }
+            this.statusBattery = function () {
+                if (battery < 100) {
+                    console.log("Charging");
+                }
+                else {
+                    console.log("Battery Full");
+                }
+            }
+            this.charge = function () {
+                this.battery = 100;
+                console.log("Charged " + this.battery + "%");
+            }
+            this.sentMessage = function (mess) {
+                if (this.status == true) {
+                    this.sent.push(mess);
+                    this.battery--;
+                    this.receive++;
+                    return mess;
+                } else {
+                    alert("Turn on your phone");
+                }
+            }
+        }
+        let nokia = new Mobile(10, 100, 0, "", false);
+        nokia.checkStatus();
+        nokia.turnMobile();
+
+        nokia.sentMessage("hi!");
+        nokia.sentMessage("bye!");
+        nokia.turnMobile(true);
+        nokia.sentMessage("how are you?");
+
+        console.log(nokia.sent);
+
+        console.log(nokia);
+        nokia.charge();
+        console.log(nokia);
+
+
+    </script>
+</body>
+
+</html>
