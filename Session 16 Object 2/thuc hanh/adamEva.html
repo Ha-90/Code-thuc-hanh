@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var count = 0;
+    function Apple(weightApple) {
+        this.weightApple = weightApple,
+
+        this.decrease = function () {
+           let decrease = this.weightApple - count;
+           console.log(decrease);
+        }
+        this.isEmpty = function () {
+            if (count == 10) {
+                alert("Đã ăn hết táo");
+            }
+        }
+        this.getWeightApple = function () {
+            console.log(this.weightApple - count);
+        }
+    }
+    function Human(name, gender, weightHuman) {
+        this.name = name,
+        this.gender = gender,
+        this.weightHuman = weightHuman;
+
+        this.say = function say() {
+            if (count == 10) {
+                console.log(name + " nói: hết mn táo rồi @@");
+            } else {
+                console.log(name + " nói: i want to eat Apple");
+            }
+        }
+        this.checkApple = function() {
+            console.log(apple.weightApple - count); 
+            
+        }
+        this.eat = function () {
+            if (count == 10) {
+                alert("Đã ăn hết táo")
+            } else{
+                console.log(name + " vừa ăn 1đv táo")
+                this.weightHuman++;
+                count++;
+            } 
+        }
+    }
+  
+    let apple = new Apple(10);
+    console.log(apple.weightApple);
+    let human1 = new Human("Adam", "male", 60);
+    console.log(human1);
+    human1.say();
+    human1.eat();
+    console.log(human1.weightHuman);
+    
+    let human2 = new Human("Eva", "female", 45);
+    console.log(human2);
+    human2.say();
+    human2.eat();
+    console.log(human2.weightHuman);
+    apple.getWeightApple;
+    
+    human1.eat();
+    human2.eat();
+    human1.eat();
+    human2.eat();
+    human1.eat();
+    human2.eat();
+    human1.eat();
+    human2.eat();
+
+    console.log(count);
+    human2.checkApple();
+    apple.getWeightApple();
+
+    console.log(human1.weightHuman);
+    console.log(human2.weightHuman);
+    human1.say();
+    human2.say();
+</script>
+</html>
