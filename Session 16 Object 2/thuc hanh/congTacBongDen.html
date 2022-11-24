@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function SwitchButton(status, lamp) {
+        this.status = false,
+        this.lamp = ElectricLamp,
+
+        this.connectToLamp = function(ElectricLamp) {
+            if (this.status == false) {
+                this.lamp == false;
+                console.log("Switch is not connect to Lamp");
+            } else {
+                this.lamp = true;
+                console.log("Switch is connected to Lamp");
+            }
+        }
+        this.switchOff = function() {
+            this.status = false;
+            electricLamp.status = false;
+            console.log("Turn OFF");
+        }
+        this.switchOn = function() {
+            this.status = true;
+            electricLamp.status = true;
+            console.log("Turn ON");
+        }
+    }
+    function ElectricLamp(status) {
+        this.status = false;
+
+        this.turnOff = function() {
+            if (switchButton.status == false) {
+                electricLamp.status = false;
+                console.log("ElectricLamp is OFF");
+            }
+        }
+        this.turnOn = function() {
+            if (switchButton.status == true) {
+                electricLamp.status = true;
+                console.log("ElectricLamp is ON");
+            }
+        }
+    }
+    let switchButton = new SwitchButton(false, false);
+    let electricLamp = new ElectricLamp(false);
+    console.log(switchButton.status);
+    console.log(electricLamp.status);
+    switchButton.connectToLamp();
+
+    switchButton.switchOn();
+    switchButton.connectToLamp();
+    console.log(electricLamp.status); 
+    electricLamp.turnOn();
+
+    switchButton.switchOff();
+    switchButton.connectToLamp();
+    console.log(electricLamp.status); 
+    electricLamp.turnOff();
+
+</script>
+</html>
