@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var count = 0;
+    function Rat(name, weight, speed, status) {
+        this.name = name,
+        this.weight = weight,
+        this.speed = speed,
+        this.status = true,
+
+        this.sound = function() {
+            console.log("Chill... chill...");
+        }
+    }
+    function Cat(name, weight, speed) {
+        this.name = name,
+        this.weight = weight,
+        this.speed = speed,
+
+        this.sound = function() {
+            console.log("Meow... Meow...");
+        },
+        this.catchMice = function() {
+            if (tom.speed > jerry.speed) {
+                console.log("the Cat catching a mouse");
+            } 
+            else if(tom.speed < jerry.speed) {
+                alert("Cat can not catch the mouse");
+            }
+        },
+        this.eatMice = function() {
+            if ((tom.speed > jerry.speed) && (jerry.status==true)) {
+                console.log("Tom eating Jerry $#%@&");
+                tom.weight = tom.weight + jerry.weight;
+                count++;
+            }
+            else if (jerry.status == false) {
+                alert("Mouse is to die. Do not eat")
+            }
+        }
+    }
+    let jerry = new Rat("Jerry1", 0.025, 5, true);
+    console.log(jerry);
+    jerry.sound();
+    
+
+    let tom = new Cat("Tom", 2, 10);
+    console.log(tom);
+    tom.sound();
+    tom.catchMice();
+    tom.eatMice();
+    console.log(tom.weight);
+    console.log(count);
+
+    // jerry.status = false;
+    // tom.catchMice();
+    // tom.eatMice();
+    // console.log(count);
+
+    // jerry.speed = 11;
+    // tom.catchMice();
+    // tom.eatMice();
+
+    
+
+ 
+
+
+
+
+
+</script>
+</html>
