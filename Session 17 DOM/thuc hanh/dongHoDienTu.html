@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<style>
+    body {
+        /* background-image: url(/img/L17/hoa-anh-dao-3.png), url(/img/L17/cuc\ trang.jpg),
+        url(/img/L17/hoaaa.jpg) */
+        background-size: 100%;
+    }
+
+    .background {
+
+        width: 100%;
+        height: 500px;
+
+    }
+
+    #clock {
+
+        height: 150px;
+        font-size: 100px;
+
+    }
+</style>
+
+<body id="body">
+    <div class="background">
+        <h3>Thời gian bây giờ là:</h3>
+        <div id="clock"></div>
+    </div>
+</body>
+<script>
+    function Clock() {
+        let today = new Date();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" +
+            today.getSeconds();
+        document.getElementById("clock").innerHTML = time;
+    }
+
+    let audio = document.createElement('audio');
+    function music() {
+        audio.src = "/audio/NhacKhongLoiHayNhat-V.A-3719032.mp3";
+        audio.autoplay = true;
+    }
+
+    let image = [];
+    let i = 0;
+    image[0] = "url(/img/L17/hoa-anh-dao-3.png)";
+    image[1] = "url(/img/L17/cuc\ trang.jpg)";
+    image[2] = "url(/img/L17/hoaaa.jpg";
+    function changeImage() {
+        var el = document.getElementById('body');
+        el.style.backgroundImage = image[i];
+        if (i < image.length - 1) {
+            i++;
+        } else {
+            i = 0;
+        }
+    }
+
+    setInterval(Clock, 1000);
+    setInterval(music, 300000);
+    setInterval(changeImage, 10000);
+
+
+</script>
+
+</html>

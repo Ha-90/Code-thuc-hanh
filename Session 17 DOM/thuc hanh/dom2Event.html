@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Ronaldo</li>
+        <li>Messi</li>
+        <li>Neymar</li>
+    </ul>
+    <button id="btn">Click to add new player</button>
+    <input id="ipt" type="text">
+</body>
+<script>
+    let ul = document.getElementById("list");
+    // let btn = document.getElementById("btn");
+    // btn.addEventListener('click', function() {
+    //     let li = document.createElement('li');
+    //     let input = document.createTextNode(prompt("input a player"));
+    //     li.appendChild(input);
+    //     ul.appendChild(li);
+    // })
+
+    let ipt = document.getElementById("ipt");
+    ipt.addEventListener('keypress', function(event){
+        const code = event.keyCode;
+        if (event.keyCode == 13) {
+        let li = document.createElement('li');
+        li.appendChild(ipt);
+        ul.appendChild(li);
+        }
+    })
+    
+
+</script>
+</html>
