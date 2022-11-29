@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <ul id="list">
         <li>Ronaldo</li>
@@ -26,15 +28,19 @@
     // })
 
     let ipt = document.getElementById("ipt");
-    ipt.addEventListener('keypress', function(event){
+    ipt.addEventListener('keypress', function (event) {
         const code = event.keyCode;
         if (event.keyCode == 13) {
-        let li = document.createElement('li');
-        li.appendChild(ipt);
-        ul.appendChild(li);
+            let li = document.createElement('li');
+            let value = ipt.value;
+            console.log(ipt.value);
+            li.innerHTML = value;
+            ul.appendChild(li);
+            ipt.value = "";
         }
     })
-    
+
 
 </script>
+
 </html>

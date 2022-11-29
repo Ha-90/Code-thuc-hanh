@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,11 +12,12 @@
         font-size: 100px;
     }
 </style>
+
 <body>
     <div id="countdown"></div>
     <div id="ck"></div>
     <!-- <img src="/img/ga.png" alt=""> -->
-<script>
+    <script>
         let hours = 00;
         let minutes = 9;
         let seconds = 60;
@@ -24,23 +26,26 @@
             seconds--;
             if (seconds == 00) {
                 minutes--;
-                seconds = 60;       
+                seconds = 60;
                 if (minutes == 00) {
                     minutes = 9;
                 }
             }
         }
+        let img = document.createElement("img");
+        let div = document.getElementById('ck');
         function Chicken() {
-            let chicken = document.createElement("chicken");
-            chicken.src = "/img/ga.png";
-            console.log(chicken.src);
-            document.getElementById("ck").innerHTML = chicken.src;
-            
+            div.appendChild(img);
+            img.src = "/img/ga.png";
+            console.log(img.src);           
         }
-    setInterval(timer, 1000);
-    setInterval(Chicken, 10000);
+        
+        setInterval(timer, 1000);
+        setInterval(Chicken, 5000);
+        
 
 
-</script>
+    </script>
 </body>
+
 </html>
