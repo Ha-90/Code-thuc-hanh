@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,42 +10,51 @@
     <title>Document</title>
 </head>
 <style>
-    button {
-        margin-left: 25px;
-    }
-    #guide {
+    #guide, #notification, #message_email {
         font-size: 17px;
         font-style: italic;
     }
-    a {
-        text-decoration: none;
-        color: black;
-    }
 </style>
+
 <body>
     <fieldset>
-        <!-- <legend>Form register new member</legend> -->
         <h2>Register</h2>
-    <form name="fR" action="" >
-        <label for="">Email:</label><br>
-        <input type="email" id="email" placeholder="emxample@gmail.com" required><br><br>
-        <label for="">Create Password:</label><br>
-        <input type="password" name="password" id="password" required >
-        <i class="bi bi-eye-slash" id="togglePassword"></i>
-        <p id="message"></p>
-        <p id="guide">Please include at least 1 uppercase character, 1 lowercase character, and 1 number.</p>
-        
-        <label for="">Confirm Password:</label><br>
-        <input type="password" name="password2" id="password2" required >
-        <i class="bi bi-eye-slash" id="togglePassword2"></i>
-        <p id="notification"></p>
-        <br>
-        <button id="btnRegister" type="submit" onclick="return checkPass()">Register</button>
-        <button><a href="http://127.0.0.1:5500/Session%2018%20Storage/Project%20Login/page/formLogin.html?email=a%40gmail.com&password=fawegwegw" target="_blank">Login</button></a>
+        <form name="fR" action="./formLogin.html" method="get">
+            <label for="">Email:</label><br>
+            <input type="email" id="email" placeholder="emxample@gmail.com" required>
+            <p id="message_email"></p>
+            <br>
+            <label for="">Create Password:</label><br>
+            <input type="password" name="password" id="password" required>
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+            <p id="guide">Please include at least 1 uppercase character, 1 lowercase character, and 1 number.</p>
 
-    </form>
+            <label for="">Confirm Password:</label><br>
+            <input type="password" name="password2" id="password2" required>
+            <i class="bi bi-eye-slash" id="togglePassword2"></i>
+            <p id="notification"></p>
+            <br>
+            <button id="btnRegister" type="submit" onclick="return checkPass()">Register</button>
+
+        </form>
     </fieldset>
 </body>
+
+<script>
+    function check() {
+        let pass1 = document.getElementById("password");
+        let pass2 = document.getElementById("password2");
+
+        pass2.addEventListener('keyup', function () {
+            if (pass1.value == pass2.value) {
+                document.getElementById("notification").innerHTML = "correct!";
+            } else {
+                document.getElementById("notification").innerHTML = "incorrect...";
+            }
+        })
+    }
+    check();
+</script>
 <script>
     function checkPass() {
         var firstPass = document.fR.password.value;
@@ -53,16 +63,19 @@
 
         const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
         let result = pattern.test(firstPass);
-        
 
-        if (email == null || email == "" ) {
-            document.getElementById("notification").innerHTML = "Email can't be blank";
+        if (email == localStorage.getItem('email')) {
+            document.getElementById("message_email").innerHTML = "This email is registed. Try an other email.";
+            return false;
+        }
+        if (email == null || email == "") {
+            document.getElementById("message_email").innerHTML = "Email can't be blank";
             return false;
         }
         if ((firstPass == null || firstPass == "") && (secondPass == null || secondPass == "")) {
             document.getElementById("notification").innerHTML = "Password can't be blank";
             return false;
-        } 
+        }
         if (firstPass.length < 8 || secondPass < 8) {
             document.getElementById("notification").innerHTML = "Password must be at least 8 characters long.";
             return false;
@@ -70,20 +83,24 @@
 
         if (result) {
             if (firstPass === secondPass) {
+                localStorage.setItem('email', email);
+                localStorage.setItem('password', secondPass);
+
                 alert("Register Success!");
                 return true;
             }
             else {
                 document.getElementById("notification").innerHTML = "Password is not same. Input again!";
                 return false;
-            } 
+            }
 
         } else {
-            document.getElementById("message").innerHTML = "Type is incorrect!";
+            document.getElementById("guide").innerHTML = "Password's type is incorrect!";
             return false;
-        }         
+        }
     }
 </script>
+
 <script>
     const togglePassword = document.querySelector("#togglePassword");
     const password = document.querySelector("#password");
@@ -99,29 +116,16 @@
 </script>
 <script>
     const togglePassword2 = document.querySelector("#togglePassword2");
-        const password2 = document.querySelector("#password2");
+    const password2 = document.querySelector("#password2");
 
-        togglePassword2.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password2.getAttribute("type") === "password" ? "text" : "password";
-            password2.setAttribute("type", type);
+    togglePassword2.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password2.getAttribute("type") === "password" ? "text" : "password";
+        password2.setAttribute("type", type);
 
-            // toggle the icon
-            this.classList.toggle("bi-eye");
-        });
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
 </script>
-<script>
-    const form= document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const fd = new FormData(form);
-        
-        const obj = Object.fromEntries(fd);
-        console.log(obj);
 
-        // for (item of fd) {
-        //     console.log(item);
-    })
-
-</script>
 </html>

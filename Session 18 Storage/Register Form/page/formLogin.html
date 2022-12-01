@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,32 @@
     <title>Document</title>
 </head>
 <style>
-    button {
-        width: 290px;
+    #message_email, #notification {
+        font-style: italic;
     }
-
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 </style>
+
 <body>
     <fieldset>
         <h2>Login</h2>
-        <form name="fR">
+        <form name="fR" action="">
             <label for="">Email:</label><br>
-            <input type="email" name="email" required><br><br>
+            <input type="email" name="email" required>
+            <p id="message_email"></p>
+            <br>
             <label for="">Password:</label><br>
             <input type="password" name="password" id="password" required>
-            <i class="bi bi-eye-slash" id="togglePassword"></i><br><br>
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
             <p id="notification"></p>
+            <br>
             <button type="submit" onclick="return checkPass()">Login</button><br><br>
-            <a href="">Forget password?</a>
+            <a href="./formRegister.html">Sign Up</a>
         </form>
     </fieldset>
 </body>
@@ -33,28 +43,40 @@
     function checkPass() {
         var email = document.fR.email.value;
         var password = document.fR.password.value;
+        let e = localStorage.getItem('email');
+        let p = localStorage.getItem('password');
 
         if (email == null || email == "") {
-            document.getElementById("notification").innerHTML = "Email can't be blank";
+            document.getElementById("message_email").innerHTML = "Email can't be blank";
             return false;
         }
         if ((password == null || password == "")) {
             document.getElementById("notification").innerHTML = "Password can't be blank";
             return false;
-        } 
- 
+        }
+
+        if (e === email && p === password) {
+            alert("Welcome!");
+            window.location.href = "./welcome.html"
+            return true;
+        } else {
+            alert("Sorry, email or password is not correct.");
+            return false;
+        }
+
     }
 </script>
 <script>
-     const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#password");
 
-        togglePassword.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-            // toggle the icon
-            this.classList.toggle("bi-eye");
-        });
+    togglePassword.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
 </script>
+
 </html>
