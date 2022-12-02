@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>To Do App</h2>
+    <input type="text" id="save_edit">
+    <button id="btn_save" onclick="save()">Save</button>
+    <br><br><br>
+
+    <div id="displayTodo"></div>
+</body>
+
+<script>
+    let input = document.getElementById("save_edit");
+    let btn_save = document.getElementById("btn_save");
+ 
+    let arrayTodo = ["Mini Project", "Cut figma", "ES6"];
+
+    function displayTodo() {
+   
+        let tableTodo = '<table border="1" cellspacing="1">'
+            + '<tr>'
+            + '<th>No.</th>'
+            + '<th>Todo item</th>'
+            + '<th>Status</th>'
+            + '<th colspan="3">Actions</th>'
+            + '</tr>'
+        for (let i = 0; i < arrayTodo.length; i++) {
+            tableTodo += '<tr>'
+                + '<td>' + (i + 1) + '</td>'
+                + '<td>' + arrayTodo[i] + '</td>'
+                + '<td id="status">In progress</td>'
+                + '<td> <button onclick="editTodo(' + i + ')">EDIT</button></td>'
+                + '<td> <button onclick="deleteTodo(' + i + ')">DELETE</button></td>'
+                + '<td> <button onclick="finishTodo(' + i + ')">FINISHED</button></td>'
+                + '</tr>'
+        }
+        tableTodo += '</table>'
+        document.getElementById("displayTodo").innerHTML = tableTodo;
+    }
+    displayTodo();
+
+
+  
+    function save() {
+        let addNewTodo = document.getElementById("save_edit").value;
+        arrayTodo.push(addNewTodo);
+        localStorage.setItem('Todo', arrayTodo);
+        input.value = "";
+        displayTodo();
+    }
+
+    function deleteTodo(i) {
+        arrayTodo.splice(i, 1);
+
+        displayTodo();
+    }
+
+    var value = "";
+
+    function editTodo(i) {
+        document.getElementById("save_edit").value = arrayTodo[i];
+        value = i;
+    }
+
+    // function save() {
+    //     let newEdit = document.getElementById("save_edit").value;
+    //     arrayTodo[value] = newEdit;
+
+    //     displayTodo();
+    // }
+
+    function finishTodo(i) {
+        
+        displayTodo();
+    }
+
+
+</script>
+
+</html>

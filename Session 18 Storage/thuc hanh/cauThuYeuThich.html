@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+    </ul>
+    <input id="ipt" type="text">
+    <button id="btn">Add favorite player</button>
+    <button id="clr">Clear All</button>
+</body>
+<script>
+    let ul = document.getElementById("list");
+    let btn = document.getElementById("btn");
+    let clr = document.getElementById("clr");
+    // let array = [];
+    let i = 1;
+    btn.addEventListener('click', function () {
+        let li = document.createElement('li');
+        let input = document.getElementById("ipt");
+        let close = document.createElement("button");
+        let content = document.createTextNode('X');
+
+        li.innerHTML = input.value;
+        ul.appendChild(li);
+        li.appendChild(close);
+        close.appendChild(content);
+
+        localStorage.setItem('Player' + i, input.value);
+        // array.push(input.value);
+        // localStorage.setItem('list', array);
+        input.value = "";
+        close.addEventListener("click", function () {
+        ul.removeChild(li);
+        })
+        i++;
+    })
+    clr.addEventListener('click', function() {
+        localStorage.clear();
+    })
+</script>
+
+</html>
