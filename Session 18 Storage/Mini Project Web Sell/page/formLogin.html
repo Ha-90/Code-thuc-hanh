@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="/Session 18 Storage/Mini Project Web Sell/style/form.css">
+    <title>Document</title>
+</head>
+<style>
+    #message_email,
+    #notification {
+        font-style: italic;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <fieldset>
+        <h2>Login</h2>
+        <form name="fR" action="http://127.0.0.1:5500/Session%2018%20Storage/Mini%20Project%20Web%20Sell/webSell.html">
+            <label for="">Email:</label><br>
+            <input type="email" name="email" required>
+            <p id="message_email"></p>
+            <br>
+            <label for="">Password:</label><br>
+            <input type="password" name="password" id="password" required>
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+            <p id="notification"></p>
+            <br>
+            <button type="submit" onclick="return checkPass()">Login</button><br><br>
+            <a href="./formRegister.html">Sign Up</a>
+
+        </form>
+    </fieldset>
+</body>
+<script>
+    function checkPass() {
+        var email = document.fR.email.value;
+        var password = document.fR.password.value;
+        let e = localStorage.getItem('email');
+        let p = localStorage.getItem('password');
+
+        if (email == null || email == "") {
+            document.getElementById("message_email").innerHTML = "Email can't be blank";
+            return false;
+        }
+        if ((password == null || password == "")) {
+            document.getElementById("notification").innerHTML = "Password can't be blank";
+            return false;
+        }
+
+        if (e === email && p === password) {
+            alert("Login success!");
+            return true;
+        } else {
+            alert("Sorry, email or password is not correct.");
+            return false;
+        }
+
+    }
+</script>
+<script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#password");
+
+    togglePassword.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
+</script>
+
+</html>

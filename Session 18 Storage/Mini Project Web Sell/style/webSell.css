@@ -1,0 +1,157 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0 auto;
+        max-width: 1200px;
+        font-family: helvetica;
+        /* background-color: rgb(184, 223, 184); */
+        background-image: url(./hoa-anh-dao-3.png);
+        background-size: 100%;
+        background-repeat: none;
+    }
+
+    .row {
+        content: "";
+        display: table;
+        clear: both;
+        width: 100%;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .header-link,
+    .header-link ul,
+    .header-link li {
+        background-color: rgb(81, 167, 35);
+        padding: 0;
+        margin: 0;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .header-link li {
+        position: relative;
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .header-link li a {
+        width: 152px;
+        border-right: 1px solid rgb(231, 234, 230);
+        margin-left: 0px;
+        height: 30px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+        background-color: rgb(81, 167, 35);
+        color: white;
+    }
+
+    .header-link ul ul li a {
+    width: 200px;
+    text-align: left;
+    }
+
+    .header-link li a:hover {
+        background-color: pink;
+    }
+
+    .header-link ul ul {
+        position: absolute;
+        top: 30px;
+        left: 0px;
+        visibility: hidden;
+    }
+
+    .header-link ul li:hover ul {
+        visibility: visible;
+    }
+
+    .header-link button, .header-link input {
+        float: right;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #countCart, .fa {
+        float: right;
+        margin-right: 5px;
+    }
+    .left {
+        float: left;
+        width: 25%;
+        min-height: 300px;
+        font-size: 20px;
+        padding-top: 30px;
+        line-height: 40px;
+    }
+
+    .left a {
+        text-decoration: none;
+        color: white;
+    }
+    .left a:hover {
+        text-decoration: underline;
+        color: black;
+    }
+
+    .content {
+        float: left;
+        width: 75%;
+        background-color: rgba(201, 228, 201, 0.666);
+        min-height: 530px;
+    }
+
+    .footer {
+        font-size: 25px;
+    }
+
+    button {
+        font-size: 15px;
+        width: 100px;
+        margin-right: 5px;
+        line-height: 30px;
+    }
+
+    #btnLogin {
+        background-color: orange;
+    }
+    #btnLogin a {
+        text-decoration: none;
+    }
+    #countCart {
+        color: white;
+    }
+    table {
+        width: 800px;
+        height: 300px;
+        padding: 20px;
+    }
+
+    table td {
+        width: 200px;
+        height: 300px;
+        text-align: center;
+
+    }
+
+    table td img {
+        width: 210px;
+        height: 300px;
+        padding: 10px;
+    }
+
+    .price {
+        color: purple;
+        font-weight: bold;
+        line-height: 30px;
+    }
+

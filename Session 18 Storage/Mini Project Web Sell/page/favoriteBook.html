@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Session 18 Storage/Mini Project Web Sell/style/webSell.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    .content img {
+        width: 210px;
+        height: 300px;
+    }
+</style>
+
+<body onload="favoriteDraw()">
+    <div class="header">
+        <h1>SÁCH TIẾNG NHẬT - 日本語の本</h1>
+    </div>
+    <div class="header-link">
+        <ul>
+            <li><a href="/Session 18 Storage/Mini Project Web Sell/page/webSell.html">Home</a>
+            </li>
+            <li><a href="/Session 18 Storage/Mini Project Web Sell/page/webSell.html">Danh mục sách</a>
+                <ul class="minna">
+                    <li> <a href="">Minna no nihongo I</a></li>
+                    <li><a href="">Minna no nihongo II</a> </li>
+                    <li><a href="">JLPT N3</a></li>
+                    <li><a href="">JLPT N2</a></li>
+                </ul>
+            </li>
+            <li><a href="/Session 18 Storage/Mini Project Web Sell/page/favoriteBook.html">Sách yêu thích</a></li>
+            <li><a href="/Session 18 Storage/Mini Project Web Sell/page/gioHang.html">Giỏ hàng</a></li>
+            <li><a href="/Session 18 Storage/Mini Project Web Sell/page/daMua.html">Sách đã mua</a></li>
+
+            <span id="countCart"></span><i class="fa fa-shopping-cart" style="font-size:24px; color: white;"></i>
+            <button>Tìm kiếm</button><input type="text">
+            <button type="button" id="btnLogin"><a href="/Session 18 Storage/Mini Project Web Sell/page/formLogin.html">Login</a></button>
+
+        </ul>
+    </div>
+    <div class="row">
+        <div class="left">
+            <a href="">Minna no Nihongo (bản cũ)</a> <br>
+            <a href="">Minna no Nihongo (bản mới)</a> <br>
+            <a href="">Kanji 漢字</a><br>
+            <a href="">Dokkai 読解</a><br>
+            <a href="">Choukai 聴解</a><br>
+            <a href="">JLPT</a><br>
+            <a href="">Văn hóa Nhật Bản</a><br>
+            <a href="">Du lịch </a><br>
+            <a href="">Ẩm thực Nhật Bản</a><br>
+            <a href="">Du học Nhật Bản</a>
+
+        </div>
+
+        <div class="content">
+            <h1>Sách yêu thích</h1>
+            <div class="listFavorite"></div>
+            <button type="button" onclick="deleteAll()" style="color: red;">Xóa tất cả</button>
+        </div>
+
+    </div>
+    <div class="footer">Copyright 2022 - Designed by Giáo trình tiếng Nhật
+
+    </div>
+</body>
+<script src="/Session 18 Storage/Mini Project Web Sell/js/favorite.js"></script>
+<script> 
+function deleteAll() {
+localStorage.removeItem("favorite");
+window.location.href = "/Session 18 Storage/Mini Project Web Sell/page/favoriteBook.html";
+}
+</script>
+</html>
