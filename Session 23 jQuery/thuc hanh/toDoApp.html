@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        text-align: center;
+    }
+    h1 {
+        padding-top: 30px;
+    }
+    input {
+        height: 30px;
+        width: 200px;
+        border-radius: 5px;
+    }
+    #btnSave {
+        background-color: blue;
+        color: white;
+        height: 30px;
+        margin-left: 10px;
+        border-radius: 5px;
+
+    }
+    table{
+        align-items: center;
+        margin-top: 30px;
+        width: 50%;
+        margin-left: 25%;
+        font-size: 20px;
+        
+    }
+    table th, td{
+        text-align: center;
+        border-bottom: 1px solid black;
+        line-height: 50px;
+    }
+    table button {
+        padding: 0 15px;
+    }
+   #edit {
+        background-color: yellow;
+   }
+   #delete {
+        background-color: red;
+   }
+   #finished {
+        background-attachment: rgb(19, 136, 19);
+   }
+</style>
+<body>
+    <div class="container">
+    <h1>To Do App</h1>
+    <input id="input" type="text" placeholder="Enter a task here"> 
+    <button id="btnSave" onclick="saveList()">SAVE</button>
+
+    <table>
+        <tr>
+            <thead>
+                <th>No.</th>
+                <th>Todo item</th>
+                <th>Status</th>
+                <th colspan="3">Actions</th>
+            </thead>
+        </tr>
+        <tr>
+            <tbody id="listTodo">
+                <!-- <td>1</td>
+                <td>note</td>
+                <td>status</td>    
+                <td>edit</td>
+                <td>del</td>
+                <td>finish</td> -->
+            </tbody>
+        </tr>
+    </table>
+    </div>
+</body>
+<script src="toDoApp.js"></script>
+</html>
