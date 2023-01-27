@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 1px solid black;
+        width: 500px;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <span>hours:</span>
+        <span id="hours">23</span>
+        <span>minutes:</span>
+        <span id="minutes">59</span>
+        <span>seconds:</span>
+        <span id="seconds">59</span>
+    </div>
+</body>
+<script>
+    let seconds = document.getElementById("seconds").innerHTML;
+    let resultSeconds = function countDown() {
+        seconds--;
+        minutes--;
+        document.getElementById("seconds").innerHTML = seconds;
+        if (seconds == 0) {
+            seconds = 60;
+            setTimeout(() => {
+                let minutes = document.getElementById("minutes").innerHTML;
+                minutes--;
+                document.getElementById("minutes").innerHTML = minutes;
+                if (minutes == -1) {
+                    document.getElementById("minutes").innerHTML = 59;
+                    setTimeout(() => {
+                        let hours = document.getElementById("hours").innerHTML;
+                        hours--;
+                        document.getElementById("hours").innerHTML = hours;
+                        if (hours == -1) {
+                            document.getElementById("hours").innerHTML = 23;
+                            document.getElementById("minutes").innerHTML = 59;
+                            document.getElementById("seconds").innerHTML = 59;
+                        }
+                    }, 0)
+                }
+            }, 0)
+        }
+    }
+    setInterval(resultSeconds, 1);
+
+
+</script>
+
+</html>

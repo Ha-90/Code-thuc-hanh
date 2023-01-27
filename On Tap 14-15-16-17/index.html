@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Tap</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let studentArr = [];
+
+    function Student(id, name, age, gender, address, point_html, point_css, point_js, status) {
+        this.id = id,
+            this.name = name,
+            this.age = age,
+            this.gender = gender,
+            this.address = address,
+            this.point_html = point_html,
+            this.point_css = point_css,
+            this.point_js = point_js,
+            this.status = status;
+
+        this.average = function () {
+            let avr = parseFloat((this.point_html + this.point_css + this.point_js)) / 3;
+            // console.log("Diem tb: " + avr);
+            return avr;
+        }
+        this.display = function () {
+            console.log((this.id + ", " + this.name + ", " + this.age));
+        }
+    }
+
+
+    studentArr[0] = new Student("KT9999", "Son", 18, "male", "ninh binh", 1, 0, 9, true);
+    studentArr[0].display();
+    studentArr[0].average();
+
+    studentArr[1] = new Student("TM6789", "Khoa", 19, "male", "Ha noi", 9, 8, 7, true);
+    studentArr[1].display();
+    studentArr[1].average();
+
+    studentArr[2] = new Student("TH3333", "Nhung", 20, "female", "Yen Bai", 10, 9, 9, true);
+    studentArr[2].display();
+    studentArr[2].average();
+
+    studentArr[3] = new Student("NB4444", "Ha", 21, "male", "Ha Nam", 6, 7, 7, true);
+    studentArr[3].display();
+    studentArr[3].average();
+
+    studentArr[4] = new Student("NH5555", "Thuy", 20, "female", "Cao Bang", 4, 3, 5, true);
+    studentArr[4].display();
+    studentArr[4].average();
+
+    console.log(studentArr);
+
+    function del() {
+        for (let i = 0; i < studentArr.length; i++) {
+            if (studentArr[i].average() < 5) {
+                studentArr[i].status = false;
+                console.log(studentArr[i].status);
+                studentArr.splice(i, 1);
+            }
+        }
+    }
+
+    del();
+    console.log(studentArr);
+
+</script>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="checkEven()">Bai 1</button><br><br>
+    <script>
+        // Nhập vào một số n, in ra các số chẵn và tính tổng trong khoảng 0...n
+        function checkEven() {
+            let n = prompt("Nhập vào 1 số");
+            let sum = 0;
+
+            for (let i = 1; i < n; i++) {
+                if (i % 2 == 0) {
+                    // document.write(i + ",");
+                    console.log("số chẵn: " + i);
+                    sum += i;
+                }
+            }
+            // document.write("tổng=" + sum);
+            console.log("Tổng = " + sum);
+        }
+    </script>
+
+    <button onclick="checkOdd()">Bai 2</button><br><br>
+    <script>
+        // Nhập vào một số n, in ra các số lẻ và tính tổng trong khoảng 0...n
+        function checkOdd() {
+            let n = prompt("Nhập vào 1 số");
+            let sum = 0;
+
+            for (let i = 1; i < n; i++) {
+                if (i % 2 != 0) {
+                    console.log("số lẻ: " + i);
+                    sum += i;
+                }
+            }
+            console.log("Tổng = " + sum);
+        }
+    </script>
+
+    <button onclick="checkPrimeNumber()">Bai 3</button><br><br>
+    <script>
+        function checkPrimeNumber() {
+            // Nhập vào một số n, kiểm tra n có phải số nguyên tố không
+            let n = prompt("Nhập vào số muốn kiểm tra");
+            if (n < 2) {
+                console.log(n + " không phải số nguyên tố");
+            } else if (n == 2) {
+                console.log(n + " là số nguyên tố");
+            } else if (n > 2) {
+                for (let i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        console.log(n + " k phải là số nguyên tố");
+                        break;
+                    }
+                    else if (i == n - 1) {
+                        console.log(n + " là số nguyên tố");
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
+
+    <button onclick="checkPerfectNumber()">Bai 4</button><br><br>
+    <script>
+        // Nhập vào một số n, kiểm tra n có phải số hoàn hảo không
+        function checkPerfectNumber() {
+            let n = parseInt(prompt("Nhập vào số muốn test"));
+            let sum = 0;
+
+            for (let i = 1; i < n; i++) {
+                if (n % i == 0) {
+                    sum += i;
+                }
+            }
+            if (sum == n && n != 0) {
+                console.log(n + " là số hoàn hảo");
+            } else {
+                console.log(n + " không phải số hoàn hảo");
+            }
+        }
+    </script>
+
+    <button onclick="listPrimeNumber()">Bai 5</button><br><br>
+    <script>
+        // Nhập vào một số n, in ra các số nguyên tố trong khoảng 0...n
+        function listPrimeNumber() {
+            let n = prompt("Nhập vào số bất kỳ");
+            console.log("Số nguyên tố từ 0 đến " + n + " là:");
+
+            for (i = 2; i <= n; i++) {
+                if (i == 2) {
+                    console.log(i);
+                }
+                if (i > 2) {
+                    for (let j = 2; j < i; j++) {
+                        flag = true;
+                        if (i % j == 0) {
+                            flag = false;
+                            break;
+                        }
+                        else {
+                            flag = true;
+                        }
+                    }
+                    if (flag) {
+                        console.log(i);
+                    }
+                }
+            }
+        }
+    </script>
+
+    <button onclick="bai51()">Bai 5+1</button><br><br>
+    <script>
+        // Nhập vào một số n, in ra các số nguyên tố trong khoảng 0...n
+        // SD hàm để check số nto, dùng vòng lặp để lấy ra kq
+        function bai51() {
+            let n = prompt("Nhập vào số bất kỳ");
+            console.log("Số nguyên tố từ 0 đến " + n + " là: ");
+            for (i = 0; i <= n; i++) {
+                if (listPrimeNumber(i)) {
+                    console.log(i);
+                }
+            }
+            function listPrimeNumber(j) {
+                if (j < 2) {
+                    return false;
+                } else if (j == 2) {
+                    return true;
+                }
+                if (j > 2) {
+                    for (let x = 2; x < j; x++) {
+                        if (j % x == 0) {
+                            return false;
+                        }
+                        else if (x == j - 1) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <button onclick="listDivisor()">Bai 6</button><br><br>
+    <script>
+        // Nhập vào một số n, in ra các ước số của n và tính tổng
+        function listDivisor() {
+            let n = parseInt(prompt("Nhập vào 1 số"));
+            let sum = 0;
+            console.log("ước số của " + n + " là:");
+
+            for (i = 1; i <= n; i++) {
+                if (n % i == 0) {
+                    console.log(i);
+                    sum += i;
+                }
+            }
+            console.log("Tổng các ước của " + n + " là: " + sum);
+        }
+    </script>
+
+    <button onclick="bai7()">Bai 7</button><br><br>
+    <script>
+        // Tìm số lượng số nguyên tố khi nhập vào 
+        function bai7() {
+            let n = prompt("Nhập vào số nguyên tố muốn in ra");
+            let i = 1;
+            let number = 0;
+            console.log(n + " số nguyên tố cần tìm là:");
+            while (i <= n) {
+                if (listPrimeNumber(number)) {
+                    console.log(number);
+                    i++;
+                }
+                number++;
+            }
+            function listPrimeNumber(j) {
+                if (j < 2) {
+                    return false;
+                } else if (j == 2) {
+                    return true;
+                }
+                if (j > 2) {
+                    for (let x = 2; x <= j; x++) {
+                        if (j % x == 0) {
+                            return false;
+                        }
+                        else if (x == j - 1) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        // Cách 2 dùng cờ flag
+
+        // let n = prompt("nhap vào so luong so nguyen to muon in ra");
+        // console.log(n + " số nguyên tố cần tìm là:");
+        // let i = 1;
+        // let number = 0;
+        // while (i <= n) {
+        //     if (testIsPrime(number)) {
+        //         console.log(number);
+        //         i++;
+        //     }
+        //     number++;
+        // }
+
+        // function testIsPrime(number) {
+        //     let flag = true;
+        //     if (number < 2) {
+        //         flag = false;
+        //     }
+        //     if (number == 2) {
+        //         flag = true;
+        //     }
+        //     if (number > 2) {
+        //         for (j = 2; j < number; j++) {
+        //             if (number % j == 0) {
+        //                 flag = false;
+        //                 break;
+        //             } else {
+        //                 flag = true;
+        //             }
+        //         }
+        //     }
+        //     return flag;
+        // }
+    </script>
+
+</body>
+
+</html>

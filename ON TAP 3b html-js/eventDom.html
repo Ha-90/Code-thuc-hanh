@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM document object model</title>
+</head>
+
+<body>
+    <button id="button" onclick="test()">Click me</button>
+</body>
+<script>
+    // function test() {
+    //     console.log("11");
+    // }
+    // function test() {
+    //     console.log("12");
+    // }
+    // let btn = document.getElementById("button");
+    // btn.addEventListener('click', () => {
+    //     console.log("22");
+    // })
+    // btn.addEventListener('click', ()=>{
+    //     console.log("23");
+    // })
+
+    // incluces vaf indexOf
+    /* indexOf neeus tồn tại phần tử thì trả về vị trí, nếu k có trả về -1, trùng nhau thì trả về 
+    phàn tử đâù tiên
+    */
+   let array = [1,3,5,7,9];
+
+    console.log(array.indexOf(9));
+    console.log(array.indexOf(4));
+    
+
+   /* incluces: nếu có phần tử trả về true, ngược lại trả về false
+   */
+    console.log(array.includes(1));
+    console.log(array.includes(6));
+
+</script>
+
+</html>

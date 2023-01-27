@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./demo.css">
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+.header_logo{
+    margin-left: 50px;
+    line-height: 80px;
+    color: #2D2D2D;
+    font-size: 20px;
+}
+.header_menu{
+    display: flex;
+    line-height: 80px;
+    color: #2D2D2D;
+    font-size: 17px;
+    gap: 50px;
+    margin-right: 50px;
+}
+.about_content{
+    width: 100%;
+    height: 537.52px;
+    background-color: #F9E6F0;
+}
+.content{
+   padding: 120px 250px;
+   display: flex;
+}
+#pablo{
+    width: 195px;
+    height: 82.52px;
+    font-size: 15px;
+    line-height: 27px;
+}
+.content_title{
+    width: 515px;
+    height: 135px;
+    padding: 81px 0px 81px 70px;
+    font-size: 15px;
+    line-height: 27px;
+}
+.section{
+    width: 100%;
+    height: 640px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 120px 290px;
+    background-color: #FFFFFF;
+
+}
+.section_para_container{
+    width: 900px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.section_para_up{
+    font-size: 19px;
+    line-height: 27px;
+}
+.section_para_down{
+    font-size: 13px;
+    line-height: 22px;
+}
+.section_para_down tr:nth-child(odd){
+    background-color: #009379;
+}
+.footer{
+    width: 100%;
+    height: 669px;
+    display: flex;
+    padding: 70px 100px;
+}
+.footer_border{
+    width: 1080px;
+    height: 529px;
+    margin: 0 auto;
+    display: flex;
+    border-top: 2px solid rgb(230, 217, 217);
+    padding-top: 70px;
+}
+.contact{
+    width: 360px;
+    height: 313px;
+}
+.contact h4{
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 40px;
+}
+.contact p{
+    width: 330px;
+    height: 135px;
+}
+.message form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 120px;
+    gap: 10px;
+    width: 530px;
+    height: 529px;
+}
+.message input{
+    width: 530px;
+    height: 69px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #F3F3F3;
+}
+.message input, .message textarea {
+    padding: 21px 30px 21px 30px;
+    border: none;
+}
+.message textarea{
+    width: 530px;
+    height: 231px;
+    background-color: #F3F3F3;
+    resize: none;
+}
+.message button{
+    width: 235px;
+    height: 80px;
+    background-color: #2D2D2D;
+    color: #FFFFFF;
+    margin-top: 30px;
+}
+
+</style>
+<body>
+    <div class="header">
+        <div class="header_logo">
+            Logo
+        </div>
+        <div class="header_menu">
+            <div class="header_menu_about">
+                About
+            </div>
+            <div class="header_menu_about">
+                Work
+            </div>
+            <div class="header_menu_about">
+                Contact
+            </div>
+        </div>
+    </div>
+    <div class="about_content">
+        <div class="content">
+            <div class="content_image">
+            <img src="./image/pablo.png" alt="">
+            <p id="pablo"><b>Pablo Designero</b>
+                Designer & Unicorn Trainer</p>
+        </div>
+            <div class="content_title">
+                <p><b>Bio:</b></p>
+                Father of 3 humans, 5 unicorns & 2 dogs,I design since I can remember it. I often get asked where I get my
+                inspiration from: in everyday’s lil’ details. And sometimes in leftover food I find in my beard.
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section_para_container">
+            <div class="section_para_up">
+                When I was 5, I got adbucted by a unicorn family. When they returned me to earth, I joined a designer school. But, fo’
+                real, what I learned with my kidnaptive family really gave an edge to my creative language.
+            </div>
+            <div class="section_para_down">
+                <table>
+                    <tr>
+                        <td>Being a human is way too complicated. Time to be a unicorn.</td>
+                    </tr>
+                    <tr>
+                        <td>Try it and you’ll see. Then your Figma files are just gonna fly in color, glitter, interactions and autolayout.</td>
+                    </tr>
+                    <tr>
+                        <td>Also, grow a beard. Check my bio if that is not clear.</td>
+                    </tr>
+                    <tr>
+                        <td>Available for projects, from Monday to Tuesday, mainy between 14 and 16. (Unless there is a unicorn race on TV - DUH -in
+                            that case, come back another day).
+                            Projects include, RocknRoll covers, furniture refurbishing, Unicorn potty training and more.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_border">
+            <div class="contact">
+                <h4>Let’s work together</h4>
+                <p>This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com This is a template Figma file,
+                turned into code using Anima. Learn more at AnimaApp.com</p>
+                <div><img src="./image/Social icons.png" alt=""></div>
+            </div>
+            <div class="message">
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <textarea name="" id="" cols="50" rows="10">Type your message here</textarea>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

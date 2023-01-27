@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 15</title>
+</head>
+<body>
+    <script>
+        // Các cách khởi tạo đối tượng
+        //1. Khởi tạo literal
+        let student1 = {};
+        let student2 = {
+            //Thuộc tính của đối tượng
+            name: "Nguyễn Văn A",
+            age: 20,
+            address: "Hà nội",
+            //Hành vi của đối tượng
+            hello: function talk(){
+                console.log("Xin chào");
+            },
+            sum: function add(num1,num2){
+                return num1+num2;
+            }
+        };
+        console.log("Sudent2: ",student2);
+        //2. Khởi tạo đối tượng qua constructor
+        let person = new Object();        
+        console.log("Persion:",person);
+        //3. Khởi tạo đối tượng qua hàm tĩnh của object
+        let book1 = Object.create({});
+        console.log("Book1:",book1);
+        let book2 = Object.create({nam:"Sách văn học",price:10000});
+        console.log("Book2:",book2);
+        //Cách truy xuất vào các đặc điểm và hành vi của đối tượng
+        //-Khởi tạo giá trị cho các đặc điểm của đối tượng person - set
+        person.name = "Nguyễn Văn B";
+        person.age = 25;
+        person.love = function loveu(){
+            return "I love you";
+        }
+        console.log("person sau khi khởi tạo các đặc điểm, hành vi:",person);
+        //- gán tuổi cho student2 bằng 30
+        student2.age = 30;
+        console.log("Student2: ",student2);
+        //In ra tên của sinh viên 2
+        console.log("Tên sinh viên 2: ",student2.name);
+        //In ra tuổi của sinh viên 2
+        console.log("Tuổi sinh viên 2: ",student2["age"]);
+        //Gọi hành vi love của đối tượng person      
+        console.log(person.love());
+        //Sử dụng vòng lặp for-in để duyệt các tên thuộc tính của các đối tượng
+        for (const key in student2) {
+            console.log(student2[key]);
+        }
+
+    </script>
+</body>
+</html>

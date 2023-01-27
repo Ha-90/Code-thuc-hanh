@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/Jquery/jquery-3.6.1.js"></script>
+</head>
+<style>
+    img {
+        width: 200px;
+    }
+</style>
+<body>
+    <p>Paragraph</p>
+    <img id="img2" src="/img/gai 2.jpg" alt=""><br>
+    <button id="btn">Button</button>
+</body>
+<script>
+
+    // $('#btn').on('click', ()=>{
+    //     $('p').hide(3000, hidefinish);
+    // });
+    // function hidefinish(){
+    //     $('p').css({'background-color': 'red', 'width':'100px'});
+    //     $('p').show(3000, changeText);
+    // };
+    // function changeText(){
+    //     $('p').css({ 'background-color': 'blue', 'width': '100px' });
+    //     $('p').text('Suprise!');
+    // }
+
+    // $('#btn').on('click', ()=>{
+    //     $('p').toggle('slow')
+    // })
+
+    $('#btn').on('click', ()=>{
+        $('#img2').slideToggle('fast');
+    })
+</script>
+</html>

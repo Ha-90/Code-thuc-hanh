@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/Jquery/jquery-3.6.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<style>
+    #hocvien {
+        width: 150px;
+        height: 100px;
+        background-color: orangered;
+    }
+
+    .add-class-dom {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <form id="form" action="">
+        <label for="">User Name</label><br>
+        <input id="username" type="text"><br>
+        <label for="">Password</label><br>
+        <input type="password"><br>
+        <input type="submit">
+    </form>
+<br>
+    <div id="hocvien">Hello học viên RA!</div><br>
+    <button onclick="changeColor()"> Click DOM</button>
+    <button id="clickJquery">Click jQuery</button>
+</body>
+<script>
+    function changeColor() {
+        // document.getElementById("hocvien").style.backgroundColor = "green";
+        document.getElementById("hocvien").classList.add("add-class-dom");
+
+    }
+</script>
+<script>
+// thay doi css
+    $("#clickJquery").click(function () { // jQuery = $ thay dc cho nhau
+        // $("#hocvien").css("background-color", "yellow");
+        $("#hocvien").css({"background-color": "yellow", "width": "400px", "height":"200px", "font-size": "50px"});
+    })
+    $("#clickJquery").dblclick(() => {
+        $("#hocvien").css("background-color", "black");
+    })
+// them class jQuery
+    $("#clickJquery").click(function () {
+        $("#hocvien").addClass("add-class-dom");
+    })
+
+// su kien blur (sd trong form)
+    $("input").blur(()=>{
+        console.log("okkkkk");
+        $("#username").val(5)
+    })
+
+// su kien submit trong form
+    $("#form").on("input", (e) => {
+        e.preventDefault();
+        console.log($("#username").val());
+            // console.log("oooohhhhhhhh");
+        })
+
+// su kien click lay ra gia tri
+    $("#clickJquery").on("click", ()=>{
+        let result = $("#hocvien").text("Đổi chữ thành Goodbye mọi người!");
+        console.log(result);
+    })
+    </script>
+
+<!-- <script>
+    // ẩn hiện
+    $("#click").click(()=>{
+        $("#hocvien").toggle();
+    })
+</script> -->
+
+</html>

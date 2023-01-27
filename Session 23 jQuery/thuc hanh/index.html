@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,77 +9,105 @@
 </head>
 <style>
     .container {
-        background-color: rgb(232, 232, 160);
+        background-color: rgb(177, 191, 219);
         text-align: center;
         width: 60%;
         margin-left: 50%;
         transform: translate(-50%);
-        /* min-height: 800px; */
-        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.7);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
         border-radius: 5px;
         padding-bottom: 40px;
 
     }
+
     h1 {
         padding-top: 30px;
     }
+
     input {
         height: 30px;
         width: 200px;
         border-radius: 5px;
 
     }
+
     #btnSave {
-        background-color: blue;
+        background-color: rgb(12, 12, 237);
         color: white;
         height: 30px;
         margin-left: 10px;
-        
+
     }
-    table{
+
+    table {
         background-color: aqua;
         align-items: center;
         margin-top: 30px;
-        width: 80%;
+        min-width: 800px;
         margin-left: 50%;
         transform: translate(-50%);
         font-size: 20px;
         border: 3px solid black;
         border-radius: 5px;
-        padding-bottom: 10px;
-        
+
     }
-    table th, td{
+
+    table th,
+    td {
         text-align: center;
         border-bottom: 1px solid black;
         line-height: 50px;
     }
+
     table button {
         padding: 0 15px;
         height: 30px;
     }
+
     button {
         cursor: pointer;
         border-radius: 5px;
     }
-   #edit {
+
+    #edit {
         background-color: yellow;
-   }
-   #delete {
+    }
+
+    #delete {
         background-color: red;
-   }
-   #finished {
+    }
+
+    #finished {
         background-color: rgb(34, 165, 34);
-   }
-   .todo-item {
+    }
+
+    .todo-item {
         text-align: left;
-   }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .container table {
+            font-size: 15px;
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+        }
+    }
+    #searchValue {
+        width: 500px;
+        margin-top: 20px;
+    }
 </style>
+
 <body>
     <div class="container">
         <h1>To Do App</h1>
-        <input id="input" type="text" placeholder="Enter a task here"> 
+        <input id="input" type="text" placeholder="Enter a task here">
         <button id="btnSave" onclick="saveList()">SAVE</button>
+        <br>
+        <input id="searchValue" type="text" oninput="search()" placeholder="Search to do item">
 
         <table>
             <tr>
@@ -103,4 +132,5 @@
     </div>
 </body>
 <script src="toDoApp.js"></script>
+
 </html>

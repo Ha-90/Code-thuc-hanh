@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <a id="gg" href="https://www.google.com/"></a>
+    <a id="fb" href="https://vi-vn.facebook.com/"></a> -->
+
+    <ul id="list">DS cầu thủ
+        <li id="cp">cong phuog</li>
+    </ul>
+    <!-- <button onclick="add()">Add </button> -->
+</body>
+
+<script>
+    // let btn = document.querySelector('#btn');
+    //     function display() {
+    //         alert('It was clicked!');
+    //     }
+    //     btn.addEventListener('click', display);
+    // let btn = document.querySelector('#btn');
+    // btn.addEventListener('click', function () {
+    //     alert('It was clicked!');
+    // });
+    // let h1 = document.getElementById('heading-1');
+    // console.dir(h1);
+
+    // let a = document.getElementById("gg");
+    // let b = document.getElementById("fb");
+    // b.innerHTML = a;
+    let ul = document.getElementById("list");
+    let li1 = `<li>Messi</li>`;
+    let li2 = `<li>Ronaldo</li>`;
+    let li3 = `<li>Neyma</li>`;
+    ul.innerHTML += li1 + li2 + li3;
+
+    // console.log(ul.childNodes);
+    // ul.childNodes[2].remove();
+
+    // let cp = document.getElementById("cp");
+    // cp.remove();
+    // console.log(ul.childNodes[0]);
+
+    let listNo = ul.getElementsByTagName("li");
+    // console.log(listNo[1]);
+    listNo[3].remove();
+
+    // console.log(listNo);
+
+
+
+</script>
+
+</html>

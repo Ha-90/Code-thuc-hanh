@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        position: absolute;
+        font-size: 30px;
+    }
+
+    #btn_no {
+        margin-left: 100px;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <h2>Do you love me?</h2>
+        <button id="btn_yes">Yes</button>
+        <button id="btn_no">No</button>
+    </div>
+</body>
+<script>  
+    let yes = document.getElementById("btn_yes");
+    yes.addEventListener('click', () => {
+        document.write("I LOVE YOU");
+    })
+
+    let no = document.getElementById("btn_no");
+    no.addEventListener('mouseover', () => {
+        let x = (Math.random() * 1024);
+        let y = (Math.random() * 600);
+        document.getElementById("btn_no").style.left = x + "px";
+        document.getElementById("btn_no").style.top = y + "px";
+    })
+</script>
+
+</html>

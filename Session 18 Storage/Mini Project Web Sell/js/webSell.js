@@ -1,4 +1,3 @@
-
 let favorite = document.querySelectorAll("#favorite");
 let favoriteArr = [];
 let cart = document.querySelectorAll("#cart");
@@ -24,6 +23,7 @@ for (let i = 0; i < favorite.length; i++) {
 }
 for (let i = 0; i < cart.length; i++) {
     cart[i].addEventListener('click', function () {
+
         alert("Added your Cart");
         count = count + 1;
         document.getElementById("countCart").innerHTML = count;

@@ -1,0 +1,136 @@
+    * {
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+    }
+    .container {
+        width: 100%;
+    }
+    .header {
+        background-color: rgb(241, 88, 44);
+        position: fixed;
+        padding: 0px 10px;
+        margin: 0;
+    }
+
+    .header-nav-container {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        font-family: helvetica;
+        font-size: 17px;
+    }
+    
+    .header-nav-left {
+        min-width: 550px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-nav-left a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .header-nav-left a:hover,
+    .header-nav-right a:hover {
+        color: rgb(212, 189, 189);
+    }
+
+    .header-nav-space {
+        display: flex;
+        width: 35%;
+    }
+
+    .header-nav-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 450px;
+        padding-right: 10px;
+    }
+
+    .header-nav-right li,
+    a {
+        display: inline-flex;
+        color: white;
+        text-decoration: none;
+        /* font-size: 18px; */
+    }
+
+    .header-wrapper {
+        background-color: rgb(241, 88, 44);
+        display: flex;
+        height: 100px;
+    }
+    .header-logo {
+        width: 300px;
+    }
+    .header-logo img {
+        width: 200px;
+    }
+    .header-searchbar {
+        display: flex;
+        padding-top: 15px;
+    }
+    .header-searchbar input {
+        width: 900px;
+        height: 50px;
+    }
+    .fa-magnifying-glass {
+        background-color: rgb(241, 88, 44);
+        color: white;
+        display: flex;
+        position: absolute;
+        left: 1124px;
+        font-size: 20px;
+        width: 80px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    .header-cart {
+        display: flex;
+        justify-content: space-around ;
+        align-items: center;
+        padding: 20px;
+        width: 302px;
+    }
+    .content {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 190px;
+    }
+    .slide-image {
+        display: flex;
+    }
+   .next , .prev  {
+    position: absolute;
+    margin-top: 150px;
+    font-size: 50px;
+    color: blue;
+
+   }
+   .next {
+    margin-left: 865px;
+   }
+   .next:hover, .prev:hover {
+    background-color: rgb(75, 61, 61);
+    width: 35px;
+    height: 70px;
+    cursor: pointer;
+   }
+   .right-banner img {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+   }
+   .right-banner .right1 {
+    padding-bottom: 10px;
+   }

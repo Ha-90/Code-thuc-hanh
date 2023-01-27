@@ -10,13 +10,37 @@
     <title>Document</title>
 </head>
 <style>
+    .bookdetail {
+        display: flexbox;
+        margin-left: 10px;
+
+    }
+
     .content img {
         width: 210px;
         height: 300px;
     }
+
+    .bookprice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .remove_button {
+        margin-right: 650px;
+        background-color: rgb(241, 26, 26);
+        color: white;
+        height: 30px;
+    }
+
+    .remove_button:hover {
+        opacity: 0.5;
+    }
 </style>
 
-<body onload="favoriteDraw()">
+<body>
     <div class="header">
         <h1>SÁCH TIẾNG NHẬT - 日本語の本</h1>
     </div>
@@ -38,7 +62,8 @@
 
             <span id="countCart"></span><i class="fa fa-shopping-cart" style="font-size:24px; color: white;"></i>
             <button>Tìm kiếm</button><input type="text">
-            <button type="button" id="btnLogin"><a href="/Session 18 Storage/Mini Project Web Sell/page/formLogin.html">Login</a></button>
+            <button type="button" id="btnLogin"><a
+                    href="/Session 18 Storage/Mini Project Web Sell/page/formLogin.html">Login</a></button>
 
         </ul>
     </div>
@@ -69,10 +94,11 @@
     </div>
 </body>
 <script src="/Session 18 Storage/Mini Project Web Sell/js/favorite.js"></script>
-<script> 
-function deleteAll() {
-localStorage.removeItem("favorite");
-window.location.href = "/Session 18 Storage/Mini Project Web Sell/page/favoriteBook.html";
-}
+<script>
+    // function deleteAll() {
+    //     localStorage.removeItem("favorite");
+    //     window.location.href = "/Session 18 Storage/Mini Project Web Sell/page/favoriteBook.html";
+    // }
 </script>
+
 </html>

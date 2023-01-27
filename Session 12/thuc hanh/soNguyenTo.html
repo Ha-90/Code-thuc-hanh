@@ -10,23 +10,43 @@
     
 </body>
 <script>
-    let number = parseInt(prompt("Nhập vào số lượng số nguyên tố muốn in ra"));
-    let count = 0;
-    let n = 2;
-    while (count < number) {
-        for (i = 2; i <= number; i++) {
-            if (n == i && i == 2) {
-                document.write(n + ", ");
-            }  
-            else if (n % 2 != 0) {
-                document.write(n + ", ");
-            }
-            count++;
-            n++;
-            }
-    }   
+    // let number = parseInt(prompt("Nhập vào số lượng số nguyên tố muốn in ra"));
+    // let count = 0;
+    // let n = 2;
+    // while (count < number) {
+    //     for (i = 2; i <= number; i++) {
+    //         if (n == i && i == 2) {
+    //             document.write(n + ", ");
+    //         }  
+    //         else if (n % 2 != 0) {
+    //             document.write(n + ", ");
+    //         }
+    //         count++;
+    //         n++;
+    //         }
+    // }   
  
-        
+    // Số nguyên tô
+        var number1 = parseInt(prompt("Nhap so luong can in ra:"));
+        for (var i = 0; i <= number1; i++) {
+            if (test_prime(i)) {
+                document.write(i + " ");
+            }
+        }
+        function test_prime(n) {
+            if (n <= 1) {
+                return false;
+            } else if (n === 2) {
+                return true;
+            } else {
+                for (var x = 2; x < n; x++) {
+                    if (n % x === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }  
 
 </script>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Demo</title>
+</head>
+<body>
+    <script>
+        /*Xây dựng lớp Person
+            Thuộc tính:
+                Tên người
+                Tuổi
+                Giới tính
+                Quê quán
+                Sở thích
+            Hành vi:
+                Nói
+                Thức dạy
+                ăn
+        */
+        function person(name,age,sex,birthPlace,hobby){
+            this.name = name,
+            this.age = age,
+            this.sex = sex,
+            this.birthPlace = birthPlace,
+            this.hobby = hobby,
+            this.talk = function talk() { console.log("Xin chào"); },
+            this.wakeup = function wakeup(time){
+                console.log("Tôi dạy lúc ",time);
+            },
+            this.eat = function eat(){
+                console.log("Tôi vừa ăn pizza");
+            }
+        }
+        //Khởi tạo đối tượng từ lớp
+        let person1 = new person("Nguyễn Văn A",20,true,"Hà Nội","Bóng đá");
+        person1.id = "P001";
+        console.log("person1: ",person1);
+        let person2 = new person("Nguyễn Văn B",22,false,"Đà Nẵng","Bơi");
+        console.log("person2:",person2);
+        person2.wakeup(8);
+    </script>
+</body>
+</html>

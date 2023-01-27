@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai1()">Bai 1</button><br><br>
+    <script>
+        // Nhập vào hình vuông có cạnh là a. Tính diện tích và chu vi của hình vuông
+        function bai1() {
+            let a = parseInt(prompt("Nhập vào cạnh hình vuông"));
+            let area = a * a;
+            let perimeter = a * 4;
+            alert("diện tích: " + area + ", chu vi: " + perimeter);
+        }
+    </script>
+
+    <button onclick="bai2()">Bai 2</button><br><br>
+    <script>
+        /* Nhập vào hình chữ nhật có chiều dài a và chiều rộng b. Tính và in ra diện tích và
+            chu vi hình chữ nhật */
+        function bai2() {
+            let a = parseFloat(prompt("Nhập vào chiều dài hình chữ nhật"));
+            let b = parseFloat(prompt("Nhập vào chiều rộng hình chữ nhật"));
+            let area = a * b;
+            let perimeter = (a + b) * 2;
+            alert("diện tích: " + area + ", chu vi: " + perimeter);
+        }
+    </script>
+
+    <button onclick="bai3()">Bai 3</button><br><br>
+    <script>
+        /*Nhập vào 2 số nguyên a,b và các phép toán +,-,*,/. Thực hiện tính toán theo phép
+            toán nhập vào với hai số a,b*/
+        function bai3() {
+            let a = parseInt(prompt("Nhập vào số nguyên thứ 1"));
+            let b = parseInt(prompt("Nhập vào số nguyên thứ 2"));
+            let character = prompt("Nhập vào phép tính");
+            switch (character) {
+                case "+":
+                    let sum = a + b;
+                    alert("a+b=" + sum);
+                    break;
+                case "-":
+                    let minus = a - b;
+                    alert("a-b=" + minus);
+                    break;
+                case "*":
+                    let multi = a * b;
+                    alert("a*b=" + multi);
+                    break;
+                default:
+                    let division = a / b;
+                    alert("a/b=" + division);
+                    break;
+            }
+        }
+    </script>
+
+    <button onclick="bai4()">Bai 4</button><br><br>
+    <div id="bai4"></div>
+    <br>
+    <script>
+        /*Nhập vào thông tin sinh viên bao gồm các thông tin: Mã sinh viên, tên sinh viên,
+            tuổi, giới tính, Email, số điện thoại, địa chỉ. In ra thông tin theo định dạng sau:*/
+        function bai4() {
+            let studentId = prompt("mã sinh viên");
+            let studentName = prompt("tên sinh viên");
+            let studentAge = prompt("tuổi sinh viên");
+            let studentGender = prompt("giới tính");
+            let studentEmail = prompt("email");
+            let studentPhone = prompt("số điện thoại");
+            let studentAddress = prompt("địa chỉ");
+            let pageView = `<pre><h3>***************STUDENT INFOMATION*************</h3></pre>
+    <pre>Student ID: <span id="id"></span> Student Name: <span id="name"></span> Age: <span id="age"></span></pre>
+    <pre>Gender: <span id="gender"></span> Email: <span id="email"></span> Phone: <span id="phone"></span></pre>
+    <pre>Address: <span id="address"></span></pre>`
+
+            document.getElementById("bai4").innerHTML = pageView;
+            document.getElementById("id").innerText = studentId;
+            document.getElementById("name").innerText = studentName;
+            document.getElementById("age").innerText = studentAge;
+            document.getElementById("gender").innerText = studentGender;
+            document.getElementById("email").innerText = studentEmail;
+            document.getElementById("phone").innerText = studentPhone;
+            document.getElementById("address").innerText = studentAddress;
+        }
+    </script>
+
+    <button onclick="bai5()">Bai 5</button><br><br>
+    <script>
+        /*Nhập vào 3 cạnh của tam giác a,b,c. In ra kết quả là tam giác thường, cân, vuông,
+            vuông cân, đều*/
+        function bai5() {
+            let a = parseInt(prompt("Nhập cạnh thứ 1"));
+            let b = parseInt(prompt("Nhập cạnh thứ 2"));
+            let c = parseInt(prompt("Nhập cạnh thứ 3"));
+
+            if ((a + b > c || a + c > b || b + c > a) && (a != 0 && b != 0 && c != 0)) {
+
+                if ((a == b || b == c || a == c) && ((a ** 2 + b ** 2) == c ** 2 || (a ** 2 + c ** 2) == b || (b ** 2 + c ** 2) == a)) {
+                    alert("tam giác vuông cân");
+                } else
+                    if ((a ** 2 + b ** 2) == c ** 2 || (a ** 2 + c ** 2) == b ** 2 || (b ** 2 + c ** 2) == a ** 2) {
+                        alert("tam giác vuông");
+                    } else
+                        if (a == b && b == c) {
+                            alert("tam giác đều");
+                        } else
+                            if (a == b || b == c || a == c) {
+                                alert("tam giác cân");
+                            } else
+                                if ((a != b || b != c || a != c)) {
+                                    alert("tam giác thường");
+                                }
+            } else {
+                alert("không phải tam giác");
+            }
+        }
+    </script>
+
+    <button onclick="bai6()">Bai 6</button><br><br>
+    <script>
+        // Nhập vào một tháng m, năm y và cho biết tháng đó có bao nhiêu ngày
+        function bai6() {
+            let year = parseInt(prompt("Nhập vào năm"));
+            let month = parseInt(prompt("Nhập vào tháng"));
+            // check năm nhuận
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 100 == 0 && year % 400 == 0)) {
+                console.log(year + " là năm nhuận");
+                switch (month) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        alert("tháng " + month + " 31 ngày");
+                        break;
+                    case 2:
+                        alert("tháng " + month + " 29 ngày");
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        alert("tháng " + month + " 30 ngày");
+                        break;
+                    default:
+                        alert("k phải tháng, hãy nhập lại")
+                }
+            }
+            else {
+                console.log(year + " không phải năm nhuận");
+                switch (month) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        alert("tháng " + month + " 31 ngày");
+                        break;
+                    case 2:
+                        alert("tháng " + month + " 28 ngày");
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        alert("tháng " + month + " 30 ngày");
+                        break;
+                    default:
+                        alert("k phải tháng, hãy nhập lại")
+                }
+            }
+        }
+    </script>
+
+    <button onclick="bai7()">Bai 7</button><br><br>
+    <script>
+        // Nhập vào một số 0-9, phiên âm số vừa nhập
+        function bai7() {
+            let num = parseInt(prompt("Nhập vào số muốn phiên âm 0~9"));
+            switch (num) {
+                case 0:
+                    alert("れい／ゼロ");
+                    break;
+                case 1:
+                    alert("いち");
+                    break;
+                case 2:
+                    alert("に");
+                    break;
+                case 3:
+                    alert("さん");
+                    break;
+                case 4:
+                    alert("よん");
+                    break;
+                case 5:
+                    alert("ご");
+                    break;
+                case 6:
+                    alert("ろく");
+                    break;
+                case 7:
+                    alert("なな");
+                    break;
+                case 8:
+                    alert("はち");
+                    break;
+                case 9:
+                    alert("きゅう");
+                    break;
+                default:
+                    alert("vui lòng nhập lại số 0~9");
+                    break;
+            }
+        }
+    </script>
+
+    <button onclick="bai8()">Bai 8</button><br><br>
+    <script>
+        // Nhập vào một số gồm 3 chữ số. In ra số đảo ngược
+        function bai8() {
+            let num123 = parseInt(prompt("Nhập vào số có 3 chữ số"));
+            let num1 = parseInt(num123 / 100);
+            let num2 = parseInt((num123 % 100) / 10);
+            let num3 = parseInt((num123 % 100) % 10);
+            let empty = "";
+            // empty += num3 + num2 + num1;
+            alert(num3 + empty + num2 + empty + num1);
+        }
+    </script>
+
+    <button onclick="bai9()">Bai 9</button><br><br>
+    <script>
+        /*Nhập vào một số giây (Seconds). Chuyển đổi số giây thành giờ phút giây (a hours
+            : b minutes : c seconds)*/
+        function bai9() {
+            let seconds = parseInt(prompt("Nhập vào số giây"));
+            let a = parseInt(seconds / 3600);
+            let b = parseInt((seconds % 3600) / 60);
+            let c = (seconds % 60);
+            // let c = parseInt(((seconds % 3600) % 60)%60);
+
+
+            alert(a + " hours " + b + " minutes " + c + " seconds ");
+        }
+    </script>
+
+    <button onclick="bai10()">Bai 10</button><br><br>
+    <script>
+        // Nhập vào một số nguyên, kiểm tra số đó có phải là số nguyên tố - số hoàn hảo
+        function bai10() {
+            let num = parseInt(prompt("Nhập vào số bất kỳ"));
+            if (num == 2) {
+                alert(num+ " là số nguyên tố");
+            } else {
+                for (i = 3; i < num; i++) {
+                    let j = 1;
+                    for (;j < i; j++) {
+                        if (num%j !=0) {
+                            alert(i+" là số nguyên tố");
+                        } else {
+                            alert(i+" k phải số nguyên tố");
+                        }
+                    }
+
+                }
+            }
+        }
+
+        // Cách dùng cờ flag:
+        
+        // let n = parseInt(prompt("test so nguyen to"));
+        //     let flag = true;
+        //     if (n < 2) {
+        //         flag = false;
+        //     }
+        //     if (n == 2) {
+        //         flag = true;
+        //     }
+        //     if (n > 2) {
+        //         for (let i = 2; i < n; i++) {
+        //             if (n % i == 0) {
+        //                 flag = false;
+        //                 break;
+        //             } else {
+        //                 flag = true;
+        //             }
+        //         }
+        //     }
+        //     if (flag) {
+        //         console.log(n + " la so nguyen to");
+        //     } else {
+        //         console.log(n + " k phai so nguyen to");
+        //     }
+    </script>
+
+    <button onclick="costElectric()">Bai 11</button><br><br>
+    <script>
+        /*Viết chương trình tính giá tiền tiêu thụ điện của hộ gia đình:
+        - Nhập vào chỉ số điện tiêu thụ điện cũ và số điện tiêu thụ mới
+        - Tính số điện tiêu thụ và tổng tiền tiêu thụ của hộ gia đình biết:
+        ▪ Tiền thuê bao điện hàng tháng 10.000đ
+        ▪ Số điện tiêu thụ = Chỉ số mới – chỉ số cũ
+        ▪ Giá định mức tiền điện
+        Số điện Giá
+        0 – 50 700 đ/số
+        50-100 900 đ/số
+        100-150 1100 đ/số
+        >150 1300đ/số*/
+        function costElectric() {
+            let oldElectric = parseFloat(prompt("Nhập vào chỉ số điện cũ"));
+            let newElectric = parseFloat(prompt("Nhập vào chỉ số điện mới"));
+            let consumeElectric = newElectric - oldElectric;
+            console.log(consumeElectric);
+            let amount;
+
+            if (consumeElectric == 0) {
+                amount = 10000;
+                alert("tiền điện = " + amount);
+            } else
+                if (consumeElectric <= 50) {
+                    amount = consumeElectric * 700;
+                    alert("tiền điện = " + amount);
+                } else
+                    if (consumeElectric <= 100) {
+                        amount = 50 * 700 + (consumeElectric - 50) * 900;
+                        alert("tiền điện = " + amount);
+                    } else
+                        if (consumeElectric <= 150) {
+                            amount = 50 * 700 + 50 * 900 + (consumeElectric - 100) * 1100;
+                            alert("tiền điện = " + amount);
+                        } else {
+                                amount = 50 * 700 + 50 * 900 + 50 * 1100 + (consumeElectric - 150) * 1300;
+                                alert("tiền điện = " + amount);
+                            }
+        }
+    </script>
+</body>
+
+</html>

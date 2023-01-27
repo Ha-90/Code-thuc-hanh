@@ -1,74 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
     function TV(chanel, volume, status) {
         this.chanel = chanel;
         this.volume = volume;
         this.status = false;
-    
-        this.next_chanel = function(chanel) {
-            console.log("VTV"+chanel);
+
+        this.next_chanel = function (chanel) {
+            if (this.status == false) {
+                alert("TV is OFF");
+            }
+            else {
+                console.log("VTV" + chanel);
+            }
         }
-        this.volumeUp = function() {
-            volume++;
-            console.log(volume);
+        this.volumeUp = function () {
+            if (this.status == false) {
+                alert("TV is OFF");
+            }
+            else {
+                this.volume++;
+                console.log(this.volume);
+            }
         }
         this.volumeDown = function () {
-            volume--;
-            console.log(volume);
+            if (this.status == false) {
+                alert("TV is OFF");
+            }
+            else {
+                this.volume--;
+                console.log(this.volume);
+            }
         }
         this.turnOn = function () {
-            tv.status = true;
+            this.status = true;
             console.log("TV is ready to use");
         }
         this.turnOff = function () {
-            tv.status = false;
+            this.status = false;
             console.log("TV is off. Goodbye!");
         }
     }
     function Remote(model) {
         this.model = model;
 
-        this.next_chanel = function(chanel) {
+        this.next_chanel = function (chanel) {
             console.log("VTV" + chanel);
         }
-        this.volumeUp = function () {
-            tv.volume++ + 1;
-            console.log(tv.volume);
+        this.volumeUp = function (tele) {
+            tele.volume++;
+            console.log(tele.volume);
         }
-        this.volumeDown = function () {
-            tv.volume--;
-            console.log(tv.volume);
+        this.volumeDown = function (tele) {
+            tele.volume--;
+            console.log(tele.volume);
         }
-        this.turnOn = function() {
-            tv.status = true;
-            console.log("TV is ready to use");
+        this.turnOn = function (tele) {
+            tele.status = true;
+            console.log("TV " + tele.chanel + " is ready to use");
         }
-        this.turnOff = function() {
-            tv.status = false;
+        this.turnOff = function (tele) {
+            tele.status = false;
             console.log("TV is off. Goodbye!");
         }
     }
     let tv = new TV("VTV1", 50, false);
+    let tv2 = new TV("HTV", 10, false);
     console.log(tv);
     let remote = new Remote("SamsungUV007");
     console.log(remote);
 
-    tv.turnOn();
-    tv.next_chanel(7);
+    remote.turnOn(tv);
+    remote.turnOn(tv2);
+    remote.volumeUp(tv2);
+    tv2.volumeUp();
     remote.next_chanel(3);
-    tv.volumeUp();
-    tv.volumeUp();
-    remote.turnOff();
-    console.log(tv.status);
+    tv.next_chanel(9);
+
+    tv.volumeDown();
+    remote.volumeDown(tv);
+    remote.turnOff(tv);
+
+    tv.turnOff(tv2);
+
+
+
+
+
 </script>
+
 </html>

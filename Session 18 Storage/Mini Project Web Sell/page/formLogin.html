@@ -27,7 +27,7 @@
 <body>
     <fieldset>
         <h2>Login</h2>
-        <form name="fR" action="http://127.0.0.1:5500/Session%2018%20Storage/Mini%20Project%20Web%20Sell/webSell.html">
+        <form name="fR">
             <label for="">Email:</label><br>
             <input type="email" name="email" required>
             <p id="message_email"></p>
@@ -37,36 +37,46 @@
             <i class="bi bi-eye-slash" id="togglePassword"></i>
             <p id="notification"></p>
             <br>
-            <button type="submit" onclick="return checkPass()">Login</button><br><br>
+            <button type="submit" onclick="return checkPass(event)">Login</button><br><br>
             <a href="./formRegister.html">Sign Up</a>
 
         </form>
     </fieldset>
 </body>
 <script>
-    function checkPass() {
+    function checkPass(e) {
+        e.preventDefault();
         var email = document.fR.email.value;
         var password = document.fR.password.value;
-        let e = localStorage.getItem('email');
-        let p = localStorage.getItem('password');
+        let flag = false;
 
-        if (email == null || email == "") {
-            document.getElementById("message_email").innerHTML = "Email can't be blank";
+        // lấy data từ storage ra để đối chiếu
+        let listUser = localStorage.getItem('listUser');
+            listUser = JSON.parse(listUser); 
+
+            if (email == null || email == "") {
+                document.getElementById("message_email").innerHTML = "Email can't be blank";
+                return false;
+            }
+            if ((password == null || password == "")) {
+                document.getElementById("notification").innerHTML = "Password can't be blank";
+                return false;
+            }
+        // xet email và password trong storage có trùng với ô nhập hay k
+        for (let i = 0; i < listUser.length; i++) {
+            if ((listUser[i].email == email)&&(listUser[i].password == password)) { 
+                alert("Đăng nhập thành công!");
+                location.href = "/Session 18 Storage/Mini Project Web Sell/page/webSell.html"; // chuyển về Home page
+                flag = true;
+                break;
+            } else {
+                flag = false;
+            }
+        }
+            if (flag == false) {
+            alert("Email hoặc Password không hợp lệ.");
             return false;
         }
-        if ((password == null || password == "")) {
-            document.getElementById("notification").innerHTML = "Password can't be blank";
-            return false;
-        }
-
-        if (e === email && p === password) {
-            alert("Login success!");
-            return true;
-        } else {
-            alert("Sorry, email or password is not correct.");
-            return false;
-        }
-
     }
 </script>
 <script>

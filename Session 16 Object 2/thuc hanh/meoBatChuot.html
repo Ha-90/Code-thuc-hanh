@@ -18,7 +18,11 @@
         this.status = true,
 
         this.sound = function() {
+            if (this.status == true) {
             console.log("Chill... chill...");
+            } else {
+                alert("R.I.P Mouse");
+            }
         }
     }
     function Cat(name, weight, speed) {
@@ -29,22 +33,22 @@
         this.sound = function() {
             console.log("Meow... Meow...");
         },
-        this.catchMice = function() {
-            if (tom.speed > jerry.speed) {
+        this.catchMice = function(nezumi) {
+            if (this.speed > nezumi.speed) {
                 console.log("the Cat catching a mouse");
             } 
-            else if(tom.speed < jerry.speed) {
+            else if(this.speed < nezumi.speed) {
                 alert("Cat can not catch the mouse");
             }
         },
-        this.eatMice = function() {
-            if ((tom.speed > jerry.speed) && (jerry.status==true)) {
-                console.log("Tom eating Jerry $#%@&");
-                tom.weight = tom.weight + jerry.weight;
+        this.eatMice = function(nezumi) {
+            if ((this.speed > nezumi.speed) && (nezumi.status==true)) {
+                console.log("Cat eating mouse $#%@&");
+                this.weight = this.weight + nezumi.weight;
                 count++;
             }
-            else if (jerry.status == false) {
-                alert("Mouse is to die. Do not eat")
+            else if (nezumi.status == false) {
+                alert("Mouse is die. Do not eat")
             }
         }
     }
@@ -55,20 +59,21 @@
 
     let tom = new Cat("Tom", 2, 10);
     console.log(tom);
+
     tom.sound();
-    tom.catchMice();
-    tom.eatMice();
+    tom.catchMice(jerry);
+    tom.eatMice(jerry);
     console.log(tom.weight);
     console.log(count);
 
     // jerry.status = false;
-    // tom.catchMice();
-    // tom.eatMice();
+    // tom.catchMice(jerry);
+    // tom.eatMice(jerry);
     // console.log(count);
 
     // jerry.speed = 11;
-    // tom.catchMice();
-    // tom.eatMice();
+    // tom.catchMice(jerry);
+    // tom.eatMice(jerry);
 
     
 

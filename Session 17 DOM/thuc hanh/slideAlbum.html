@@ -48,8 +48,8 @@
         <button onclick="next()">次へ</button>
     </div>
 
-    <a class="prev" onclick="prev()">❮</a>
     <a class="next" onclick="next()">❯</a>
+    <a class="prev" onclick="prev()">❮</a>
 
     <script>
         var image = [
@@ -58,13 +58,13 @@
             "/img/L17 slide photos/bien he.jpg",
             "/img/L17 slide photos/thu.jpg",
             "/img/L17 slide photos/tuyet dong.jpg"
+            
         ];
         var num = 0;
 
         function next() {
             let slider = document.getElementById("slider");
             num++;
-            console.log(num);
             if (num >= image.length) {
                 num = 0;
             }

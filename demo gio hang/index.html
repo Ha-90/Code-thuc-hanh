@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3b79043855.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container .product {
+        border: 1px solid black;
+        margin: 15px;
+    }
+
+    .container .product img {
+        width: 200px;
+        height: 250px;
+    }
+
+    #view {
+        background-color: white;
+        color: black;
+        position: absolute;
+        left: 45px;
+        min-height: 20px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        Search<input type="text" id="search" oninput="searchProduct()">
+        <button onclick="viewCart()" id="cart">Cart</button> 
+    </div>
+    <div id="view"></div>
+    <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+    <div class="container" id="showProduct">
+        <!-- <div class="product">
+            <img src="./anh.jpg" alt="">
+            <p>Iphone</p>
+            <label for="">3000000</label>
+            <input type="text" value="1">
+        </div> -->
+
+    </div>
+
+</body>
+<script src="./product.js"></script>
+<script>
+    
+</script>
+
+</html>

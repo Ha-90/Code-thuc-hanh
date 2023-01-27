@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #countdown {
+        font-size: 40px;
+    }
+</style>
+
+<body>
+    <div id="countdown"></div>
+</body>
+<script>
+    let hours = 24;
+    let minutes = 0;
+    let seconds = 0;
+
+    let Countdown = function countdown() {
+        document.getElementById("countdown").innerHTML = hours + ":" + minutes + ":" + seconds;
+        seconds--;
+        if (seconds == -1) {
+            minutes--;
+            seconds = 59;
+        }
+        if (minutes == -1) {
+            hours--;
+            minutes = 59;
+        }
+        if (hours == -1) {
+            document.getElementById("countdown").innerHTML = "Wake up now!!!"
+            hours = 24;
+            minutes = 0;
+            seconds = 0;
+        }
+    }
+    setInterval(Countdown, 1);
+</script>
+
+</html>

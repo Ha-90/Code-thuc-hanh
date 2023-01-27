@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Bài 1: Viết chương trình hiển thị chuỗi “The number is N” 5 lần sử dụng vòng lặp for. Với N sẽ
+    hiển thị từ 0 đến 5.</p>
+    <p id="demo"></p>
+    <br>
+    <p>Bài 2: Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa
+    nhập vào.</p>
+    <p id="sum"></p>
+</body>
+<!-- <script>
+    let text = "";
+    for (i = 0; i < 6; i++) { 
+        text +="The number is " + i + "<br>"; 
+    } 
+    document.getElementById("demo").innerHTML = text;
+</script> -->
+<script>
+    let a = parseInt(prompt("Input a number"));
+    let sum = 0;
+    
+    for (i = 1; i <= a; i += 1) {
+    sum = sum + i;
+    }
+    document.getElementById("sum").innerHTML = "Sum = " + sum;
+</script>
+
+</html>

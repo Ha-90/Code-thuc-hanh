@@ -10,13 +10,37 @@
     <title>Document</title>
 </head>
 <style>
+    .bookdetail {
+        display: flexbox;
+        margin-left: 10px;
+
+    }
+
     .content img {
         width: 210px;
         height: 300px;
     }
+
+    .bookprice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .remove_button {
+        margin-right: 675px;
+        background-color: rgb(241, 26, 26);
+        color: white;
+        height: 30px;
+    }
+
+    .remove_button:hover {
+        opacity: 0.5;
+    }
 </style>
 
-<body onload="cartDraw()">
+<body>
     <div class="header">
         <h1>SÁCH TIẾNG NHẬT - 日本語の本</h1>
     </div>
@@ -60,18 +84,25 @@
         <div class="content">
             <h1>Giỏ hàng của bạn</h1>
             <div class="listCart"></div>
-            <button type="button" id="payCart" onclick="payCart()">Thanh toán</button>
-            <button type="button" id="deleteCart" onclick="deleteAll()" style="color: red;">Xóa khỏi giỏ</button>
+            <!-- <fieldset>
+                <div class="bill">Hóa đơn chi tiết
+                    <div id="payDetail"></div>
+                    <div id="totalPrice"></div>
+                </div>
+                <button type="button" id="payCart" onclick="payCart()">Thanh toán</button>
+            </fieldset> -->
+            
+            <button type="button" id="deleteCart" onclick="deleteAll()" style="color: red;">Xóa tất cả</button>
         </div>
     </div>
     <div class="footer">Copyright 2022 - Designed by Giáo trình tiếng Nhật</div>
 </body>
 <script src="/Session 18 Storage/Mini Project Web Sell/js/gioHang.js"></script>
 <script>
-     function deleteAll() {
-        localStorage.removeItem("cart");
-        window.location.href = "/Session 18 Storage/Mini Project Web Sell/page/gioHang.html";
-    }
+    //  function deleteAll() {
+    //     localStorage.removeItem("cart");
+    //     window.location.href = "/Session 18 Storage/Mini Project Web Sell/page/gioHang.html";
+    // }
 </script>
 
 </html>

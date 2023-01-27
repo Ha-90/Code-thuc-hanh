@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Demo</title>
+</head>
+<body>
+    <!-- Sử dụng canvas vẽ đường thẳng -->
+    <h2>Vẽ đường thẳng</h2>
+    <canvas style="border: 1px solid black;" width="500" height="300" id="canvas_line"></canvas>
+    <script>
+        //Truy cập đến phần tử canvas
+        let cv = document.getElementById("canvas_line");  
+        //Vẽ hình 2d với context của canvas  
+        let ctx = cv.getContext("2d");
+        //Vẽ đường thẳng từ tọa độ (100,100) đến tọa độ (150,150)
+        ctx.moveTo(100,100);
+        ctx.lineTo(150,150);
+        //Vẽ đường thẳng với màu sắc mặc định
+        ctx.stroke();
+    </script>
+
+    <!-- Sử dụng canvas vẽ hình chữ nhật -->
+    <h2>Vẽ hình chữ nhật</h2>
+    <canvas style="border: 1px solid black;" id="canvas_rectangle"></canvas>
+    <script>
+        let cvrec = document.getElementById("canvas_rectangle");
+        let ctxRec = cvrec.getContext("2d");
+        //Sử dụng fillStyle(color) để xác định màu sắc của hình
+        ctxRec.fillStyle = "blue";
+        //Vẽ hình chữ nhật: fullRect(x,y,width,height)
+        ctxRec.fillRect(50,50,100,50);
+    </script>
+    <!-- Sử dụng canvas vẽ hình tròn -->
+    <h2>Vẽ hình tròn</h2>
+    <canvas style="border: 1px solid black;" id="canvas_circle"></canvas>
+    <script>
+        let cvCircle = document.getElementById("canvas_circle");
+        let ctxCircle = cvCircle.getContext("2d");
+        //Sử dụng beginPath() thông báo bắt đầu vẽ hình mới
+        ctxCircle.beginPath();
+        
+        //Sử dụng arc(x,y,r,begin,end)
+        ctxCircle.arc(50,50,40,0,2*Math.PI);
+        ctxCircle.fillStyle="red";
+        ctxCircle.fill();
+    </script>
+    <!-- Sử dụng canvas vẽ text -->
+    <h2>Vẽ text Hello World</h2>
+    <canvas style="border: 1px solid black;" id="canvas_text"></canvas>
+    <script>
+        let cvText = document.getElementById("canvas_text");
+        let ctxText = cvText.getContext("2d");
+        ctxText.beginPath();
+        //Sử dụng fillText(text,x,y)
+        ctxText.font="30px Arial";
+        ctxText.fillText("Hello World",50,50);
+        ctxText.stroke();
+    </script>
+    <!-- Sử dụng canvas vẽ ảnh -->
+    <h2>Vẽ ảnh</h2>
+    <canvas style="border: 1px solid black;" id="canvas_image"></canvas>
+    <script>
+        let cvImage = document.getElementById("canvas_image");
+        let ctxImage = cvImage.getContext("2d");
+        //Khởi tạo đối tượng image từ lớp Image
+        let imgObject = new Image();
+        imgObject.src = "http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg";
+        imgObject.width = 50;
+        imgObject.height = 50;
+        imgObject.onload = function(){
+            //sủ dụng hàm drawImage(image,x,y)
+            ctxImage.drawImage(imgObject,0,0);    
+        };
+        
+    </script>
+</body>
+</html>

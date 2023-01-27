@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Add New Prodcut</h2>
+    <input type="text" id="addProduct">
+    <button onclick="addProduct()">Add</button>
+    <br><br>
+
+    <input type="text" id="editProduct">
+    <button onclick="save()">Save</button>
+    <br><br><br>
+
+    <div id="displayProduct"></div>
+</body>
+
+<script>
+    //B1: Tạo mảng
+    let arrayProduct = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S"];
+
+    //B2: Tạo hàm hiển thị danh sách sản phẩm
+    function displayProduct() {
+        //B1: Tạo bảng table
+        let tableProduct = '<table border="1" cellspacing="1">'
+            + '<tr>'
+            + '<th>Stt</th>'
+            + '<th>Product name</th>'
+            + '<th colspan="2">Action</th>'
+            + '</tr>'
+        for (let i = 0; i < arrayProduct.length; i++) {
+            tableProduct += '<tr>'
+                + '<td>' + (i + 1) + '</td>'
+                + '<td>' + arrayProduct[i] + '</td>'
+                + '<td> <button onclick="editProduct(' + i + ')">Edit</button></td>'
+                + '<td> <button onclick="deleteProduct(' + i + ')">Delete</button></td>'
+                + '</tr>'
+        }
+
+        tableProduct += '</table>'
+        document.getElementById("displayProduct").innerHTML = tableProduct
+    }
+    displayProduct();
+
+
+    /////////           HÀM THÊM SẢN PHẨM          ///////////////
+    function addProduct() {
+        //B1: Tạo biến lưu trữ giá trị của ô input add
+        let addNewProduct = document.getElementById("addProduct").value;
+
+        //B2: Thêm giá trị mới vừa nhập ở ô input vào mảng
+        arrayProduct.push(addNewProduct);
+
+        //B3: Tạo lại bảng sao khi sau khi đã thêm dữ liệu mới
+        displayProduct();
+    }
+
+
+    /////////           HÀM Delete SẢN PHẨM          ///////////////
+
+    function deleteProduct(i) {
+        //B1: Dùng hàm splice để xóa phần tử được chỉ định trong mảng
+        arrayProduct.splice(i, 1);
+
+        //B2: Tạo lại bảng sao khi sau khi đã thêm dữ liệu mới
+        displayProduct();
+    }
+
+    /////////           HÀM Edit SẢN PHẨM          ///////////////
+
+    var value = ""; //Khai báo biến toàn cục để lưu vị trí nút edit đã dc chọn
+
+    function editProduct(i) {
+        document.getElementById("editProduct").value = arrayProduct[i];
+        value = i
+    }
+
+    function save() {
+        let newEdit = document.getElementById("editProduct").value;
+        arrayProduct[value] = newEdit;
+
+        //B2: Tạo lại bảng sao khi sau khi đã thêm dữ liệu mới
+        displayProduct();
+    }
+
+
+</script>
+
+</html>

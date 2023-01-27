@@ -18,17 +18,22 @@
     <div id="ck"></div>
     <!-- <img src="/img/ga.png" alt=""> -->
     <script>
-        let hours = 00;
-        let minutes = 9;
-        let seconds = 60;
+        let hours = 0;
+        let minutes = 1;
+        let seconds = 00;
         function timer() {
             document.getElementById("countdown").innerHTML = hours + " : " + minutes + " : " + seconds;
             seconds--;
-            if (seconds == 00) {
+            if (seconds == -1) {
                 minutes--;
-                seconds = 60;
-                if (minutes == 00) {
+                seconds = 59;
+                if (minutes == -1) {
                     minutes = 9;
+                    // setTimeout(() => {
+                    //     minutes = 0;
+                    //     seconds = 0;
+                    // }, 0);
+                    
                 }
             }
         }
@@ -42,6 +47,7 @@
         
         setInterval(timer, 1000);
         setInterval(Chicken, 5000);
+        clearInterval(Chicken, 3000);
         
 
 

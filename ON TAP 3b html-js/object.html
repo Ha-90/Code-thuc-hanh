@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*object
+    name, age, add : thuộc tính
+    talk: phương thức
+    CRUD: Create, Read, Update, Delete
+    */ 
+    // let person1 = {
+    //     name: "Hoang Ha", // cặp key:value
+    //     age: "32",
+    //     address: {
+    //         district: "Mỹ Đình",
+    //         street: "Trần Bình"
+    //     },
+    //     talk: function () {
+    //         console.log("おはようございます！");
+    //     }
+    // }
+    // Create: thêm thuộc tính vào đối tượng Object
+        // person1.id = 1;
+        // console.log(person1);
+
+    // Read
+        // for (let key in person1) { // for in ra index. for of ra value
+        //     console.log(key);
+        // }
+        // for (let [key, value] of Object.entries(person1)) { 
+        //         console.log(key, value);
+        //     }
+
+    // Update
+    // person1.age = "18";
+    // console.log(person1);
+
+    // // Delete
+    // delete person1.address;
+    // console.log(person1);
+//*********************************************************************
+
+    // Spread dạng shallow clone (clone nông, k clone dc hết)
+    //let person2 = {...person1} // ... k làm thay đổi object gốc
+    // person1.age = "16"; 
+    // person1.address.district = "Mỹ Tho"; // thay đổi
+    // console.log(person1);
+    // console.log(person2);
+
+    // Object.assign
+    // let person2 = Object.assign({}, person1);
+    // person1.age = "18";
+    // person1.address.street = "Hòa Bình";
+    // console.log(person1);
+    // console.log(person2);
+
+    // deep clone
+    // let person2 = JSON.parse(JSON.stringify(person1));
+    // person1.address.district = "Ba Đình";
+    // console.log(person1);
+    // console.log(person2);
+
+
+    // object constructor bản thiết kế
+        // function User(firstName, lastName, age) {
+        //     this.firstName = firstName;
+        //     this.lastName = lastName;
+        //     this.age = age;
+        // }
+        // let mimi = new User("Dương", "Phạm Tùng", "15");
+        // let ngocThu = new User("Thu", "Trương Minh", "18");
+        // console.log(mimi);
+        // console.log(ngocThu);
+
+    // new Date, Set
+    // let array = [1,1,1,5,4,8,8,9,1,1,1,5,5,5];
+    // let result = new Set(array); // lấy ra mảng mới - loại phần tử trùng lặp
+    // console.log("result", result);
+
+    let date = new Date();
+    console.log(date.getDate());
+    console.log(date.getMonth());
+    console.log(date.getFullYear());
+
+
+
+
+
+
+
+    // Create vd
+    // let object = {
+    //         name: "Hoang Ha", // cặp key:value
+    //         age: "32",
+    //         address: "Ninh Binh",
+    //         talk: function () {
+    //             console.log("おはようございます！");
+    //         }
+    // // tham trị: string ...
+    // let a = 7;
+    // let b = a;
+    // a = 9;
+    // console.log(b);
+
+    // // tham chiếu: object, array, function
+    // let student = {
+    //     name: "mimi",
+    // }
+    // let duong = student;
+    // student.name = "Đạt";
+    // console.log(duong);
+
+    
+    
+    
+
+</script>
+</html>

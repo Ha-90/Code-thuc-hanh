@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Slides</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .detail-image {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="detail-image">
+            <img id="image" src="./img Shopee/1.png">
+        </div>
+    </div>
+</body>
+<script>
+    let arrayImages =[
+        "./img Shopee/1.png",
+        "./img Shopee/2.jpg",
+        "./img Shopee/3.jpg",
+        "./img Shopee/4.png",
+        "./img Shopee/5.jpg"
+    ];
+    let count = 0;
+    let showBanner = function (){
+        let image = document.getElementById("image");
+        image.src = arrayImages[count];
+        count++;
+        if(count == 5){
+            count = 0;
+        }
+    }
+    setInterval(showBanner, 1000);
+</script>
+</html>

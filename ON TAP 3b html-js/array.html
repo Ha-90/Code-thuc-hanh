@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // tìm số nguyên tố từ 0-n bằng hàm và vòng lặp
+    // let n = prompt("Nhập vào số nguyên tố muốn in ra");
+    // let i = 1;
+    // let number = 0;
+    // while (i <= n) {
+    //     if (listPrimeNumber(number)) {
+    //         console.log(number);
+    //         i++;
+    //     }
+    //     number++;
+    // }
+    // function listPrimeNumber(j) {
+    //     if (j < 2) {
+    //         return false;
+    //     } else if (j == 2) {
+    //         return true;
+    //     }
+    //     if (j > 2) {
+    //         for (let x = 2; x <= j ; x++) {
+    //             if (j % x == 0) {
+    //                 return false;
+    //             }
+    //             else if (x == j - 1) {
+    //                 return true;
+    //             }
+    //         }
+    //     }
+    // }
+
+</script>
+
+<script>
+    // mảng
+    // let listNumbers = [1,2,3,4,5,6,7];
+    // splice tác động trực tiếp vào mảng gốc, làm thay đổi mảng gốc
+    // listNumbers.splice(3,1,9); // xóa và thay thế 4=9
+    // listNumbers.splice(5,0,10); // chèn 10 vào sau 5
+    // console.log(listNumbers);
+
+    // slice coppy ra mảng mới, k ảnh hưởng mảng gốc
+    // let newList = listNumbers.slice(3,6); // coppy 4,5 ra mảng mới
+    // console.log(newList);
+
+    // Các method làm việc với array
+    // *****************filter:************* lọc
+    // let listNumbers = [1, 2, 3, 6, 4, 7];
+    // listNumbers.filter((value, index, array)=>{
+    //         console.log("value", value); // các phần tử
+    //         console.log("index", index); // vị trí các phần tử
+    //         console.log("array", array); // trả về mảng
+
+    //     if (value % 2 == 0) { // dk tìm số chẵn
+    //         console.log(value); // in ra số chẵn
+    //         console.log("index", index); // vị trí các số chẵn
+    //         console.log("----------");
+    //     }
+    // })
+
+    // *************map************************ số phần tử k thay đổi
+    // let map = listNumbers.map((value, index, array) => {
+    // console.log("value", value); // các phần tử
+    // console.log("index", index); // vị trí các phần tử
+    // console.log("array", array); // trả về mảng
+    // return value % 2 == 0;
+    // })
+    // console.log(map);
+
+    // **************forEach: k trả về mảng mới*****************
+    // let listNumbers = [1, 2, 3, 6, 4, 7];
+    // let sum = 0;
+    //     listNumbers.forEach((value, index, array)=> {
+    //         sum += value;
+            // console.log(value);
+            // console.log("index", index);
+            // console.log(array);
+
+        // })
+        // console.log("sum", sum);
+
+
+        // callback hàm được truyền vào làm tham số của hàm khác
+        function hello(callback) {
+            console.log(callback());
+        }
+        hello(test);
+        function test() {
+           return "hello jv10";
+        }
+</script>
+
+</html>
